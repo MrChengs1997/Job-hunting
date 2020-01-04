@@ -1,6 +1,6 @@
 <template>
     <div id="login_bg">
-    <register/>
+    <login/>
     </div>
 </template>
 

@@ -10,6 +10,8 @@
         <li><a target="_blank" href="h/toForum.html">论坛</a></li>
         <li class="current"><a rel="nofollow" href="jianli.html">我的简历</a></li>
       </ul>
+
+
       <dl class="collapsible_menu">
         <dt>
           <span>jason&nbsp;</span>
@@ -23,12 +25,9 @@
         <dd><a href="accountBind.html">帐号设置</a></dd>
         <dd class="logout"><a rel="nofollow" href="login.html">退出</a></dd>
       </dl>
-      <div class="dn" id="noticeTip">
-        <span class="bot"></span>
-        <span class="top"></span>
-        <a target="_blank" href="delivery.html"><strong>0</strong>条新投递反馈</a>
-        <a class="closeNT" href="javascript:;"></a>
-      </div>
+
+
+
     </div>
   </div><!-- end #header -->
 </template>

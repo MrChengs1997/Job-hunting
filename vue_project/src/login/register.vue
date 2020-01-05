@@ -41,6 +41,8 @@
 <script>
   //引入axios
   import  axios from  'axios'
+  //引入邮箱格式校验
+  import CheckEmailUtil from '../util/CheckEmailUtil'
 
   export default {
     props:{
@@ -79,8 +81,9 @@
       },
       //校验邮箱&密码位数
       checkEmail(){
-        const email = this.user_email
-        alert(email)
+        const email = this.user_email.trim()
+        //alert(email)
+        //校验邮箱
         if (email === ''){
           this.beErrorMsg="请正确填写邮箱"
           this.beError='block'
@@ -96,7 +99,6 @@
         }
         this.beError='none'//邮箱校验
         this.beErrorMsg=''//邮箱提示信息
-
       },
       //校验密码
       checkPwd(){
@@ -113,9 +115,9 @@
 
       //进行注册按钮
       register(){
-        const email = this.user_email
+        const email = this.user_email.trim()
         const attr = this.user_attr
-        const pwd = this.user_pwd
+        const pwd = this.user_pwd.trim()
         const ischecked = this.ischecked
 
         //协议校验
@@ -123,27 +125,27 @@
           alert("请查看拉钩用户协议，并进行勾选同意选项")
           return
         }
-
         const  url = `http://localhost:8082/register?UserEmail=${email}&UserPwd=${pwd}&UserAttr=${attr}`;
-
-        console.log(url)
         axios({
           url:url,
           method:'GET'
         }).then(response => {
-          console.log('/posts post', response.data)
-          console.log(url)
-        }).catch(error=>{
 
+          const respdata = response.data
+
+          if (respdata == 0){
+            alert("请求错误！")
+          }else if(respdata == 1){
+            alert("注册成功,前往登陆页面")
+            this.update(true)
+          }else if(respdata == 2){
+            alert("注册用户已经存在！")
+          }
+        }).catch(error=>{
+          alert("服务异常，请联系管理员！")
         })
 
 
-
-
-        console.log(this.user_attr)
-        console.log(this.user_email)
-        console.log(this.user_pwd)
-        console.log(this.ischecked)
       }
     }
   }

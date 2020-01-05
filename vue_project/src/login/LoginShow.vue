@@ -2,7 +2,7 @@
       <div id="login_bg" style="width: 1366px ;height: 667px">
         <div class="login_wrapper">
           <div class="login_header">
-            <a href="h/"><img src="../style/images/logo_white.png" width="285" height="62" alt="拉勾招聘" /></a>
+            <a href="#"><img src="../style/images/logo_white.png" width="285" height="62" alt="拉勾招聘" /></a>
             <div id="cloud_s"><img src="../style/images/cloud_s.png" width="81" height="52" alt="cloud" /></div>
             <div id="cloud_m"><img src="../style/images/cloud_m.png" width="136" height="95"  alt="cloud" /></div>
           </div>
@@ -14,12 +14,9 @@
             <register  :showlogin="showlogin" :update="update"/>
           </div>
         </div>
-
       </div>
 </template>
-
 <script>
-
   import register from './register'
   import login from './login'
 

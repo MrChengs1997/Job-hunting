@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.provider.design.mapper.VueLoginAndRegisterMapper">
+
+
+    <insert id="register" parameterType="core.design.pojo.user.UserDetailDto" >
+        insert into user_detail(user_email,user_pwd,user_attr)
+        values(#{UserEmail},#{UserPwd},#{UserAttr})
+    </insert>
+
+    <select id="checkUserExist" parameterType="string" resultType="int">
+        select user_id userId from user_detail where user_email=#{email}
+    </select>
+
+    <select id="login" parameterType="string" resultType="string">
+        select user_pwd  from user_detail  where user_email=#{email}
+    </select>
+
+</mapper>

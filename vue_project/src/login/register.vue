@@ -1,53 +1,156 @@
 <template>
-  <div class="login_wrapper">
-    <div class="login_header">
-      <a href="h/"><img src="../style/images/logo_white.png" width="285" height="62" alt="拉勾招聘" /></a>
-      <div id="cloud_s"><img src="../style/images/cloud_s.png" width="81" height="52" alt="cloud" /></div>
-      <div id="cloud_m"><img src="../style/images/cloud_m.png" width="136" height="95"  alt="cloud" /></div>
-    </div>
+  <div >
+ <div class="login_box">
 
-    <input type="hidden" id="resubmitToken" value="9b207beb1e014a93bc852b7ba450db27" />
-    <div class="login_box">
-      <form id="loginForm">
-        <ul class="register_radio clearfix">
-          <li>
-            找工作
-            <input type="radio" value="0" name="type" />
-          </li>
-          <li>
-            招人
-            <input type="radio" value="1" name="type" />
-          </li>
-        </ul>
-        <input type="text" id="email" name="email" tabindex="1" placeholder="请输入常用邮箱地址" />
-        <span class="error" style="display:none;" id="beError"></span>
-        <input type="password" id="password" name="password" tabindex="2" placeholder="请输入密码" />
-        <label class="fl registerJianJu" for="checkbox">
-          <input type="checkbox" id="checkbox" name="checkbox" checked  class="checkbox valid" />我已阅读并同意<a href="h/privacy.html" target="_blank">《拉勾用户协议》</a>
-        </label>
-        <input type="submit" id="submitLogin" value="注 &nbsp; &nbsp; 册" />
+        <form id="loginForm" autocomplete="off" @submit.prevent="register">
+          <ul class="register_radio clearfix">
+            <li :class="working" @click="work" :style="{background:working}">
+              找工作
+              <input  v-model="user_attr"  checked="checked"  type="radio"  value="0" name="type" />
+            </li>
+            <li   @click="hire"  :style="{background:hiring}">
+              招人
+              <input v-model="user_attr" type="radio" value="1" name="type" />
+            </li>
+          </ul>
+          <input type="text" @blur.prevent="checkEmail" v-model="user_email" id="email" name="email" tabindex="1" placeholder="请输入常用邮箱地址" />
+          <span class="error"  :style="{display:beError}" id="beError">{{beErrorMsg}}</span>
 
-        <input type="hidden" id="callback" name="callback" value=""/>
-        <input type="hidden" id="authType" name="authType" value=""/>
-        <input type="hidden" id="signature" name="signature" value=""/>
-        <input type="hidden" id="timestamp" name="timestamp" value=""/>
-      </form>
-      <div class="login_right">
-        <div>已有拉勾帐号</div>
-        <a  href="login.html"  class="registor_now">直接登录</a>
-        <div class="login_others">使用以下帐号直接登录:</div>
-        <a  href="#"  target="_blank" class="icon_wb" title="使用新浪微博帐号登录"></a>
-        <a  href="#"  class="icon_qq" target="_blank" title="使用腾讯QQ帐号登录" ></a>
+          <input type="password" @blur.prevent="checkPwd" v-model="user_pwd" id="password" name="password" tabindex="2" placeholder="请输入密码(长度大于8位）"  />
+          <span class="error"  :style="{display:beErrorPwd}" >{{beErrorMsgPwd}}</span>
+          <label class="fl registerJianJu" for="checkbox">
+            <input type="checkbox" v-model="ischecked" id="checkbox" name="checkbox" checked  class="checkbox valid" />我已阅读并同意<a href="h/privacy.html" target="_blank">《拉勾用户协议》</a>
+<!--            <span class="error"  :style="{display:beErrorValid}" >{{beErrorMsgValid}}</span>-->
+          </label>
+          <button   type="submit" id="submitLogin" > 注册</button>
+<!--          <input type="submit" id="submitLogin" value="注 &nbsp; &nbsp; 册" />-->
+<!--          <a style="color:#fff;"  class="submitLogin" title="">注 &nbsp; &nbsp; 册</a>-->
+        </form>
+        <div class="login_right">
+          <div>已有拉勾帐号</div>
+          <a  @click="login"  class="registor_now">直接登录</a>
+          <div class="login_others">使用以下帐号直接登录:</div>
+          <a  href="#"  target="_blank" class="icon_wb" title="使用新浪微博帐号登录"></a>
+          <a  href="#"  class="icon_qq" target="_blank" title="使用腾讯QQ帐号登录" ></a>
+        </div>
       </div>
-    </div>
-    <div class="login_box_btm"></div>
+      <div class="login_box_btm"></div>
   </div>
 </template>
 
 <script>
-  export default {}
+  //引入axios
+  import  axios from  'axios'
+
+  export default {
+    props:{
+      update:{//指定属性名，属性值的类型，必要性
+        type:Function,
+        required : true
+      },
+      showlogin:''
+    },
+    data () {
+      return {
+        user_attr:'',//用户属性（招聘/找工作）
+        user_email:'',//用户输入邮箱
+        user_pwd:'',//用户输入密码
+        ischecked:'',//协议是否勾选
+        working:'',//是否找工作
+        hiring:'',//是否招人
+        beError:'none',//邮箱校验
+        beErrorMsg:'',//邮箱提示信息
+        beErrorPwd:'',//密码位数判断
+        beErrorMsgPwd:'',//密码位数提示
+      }
+    },
+    methods: {
+      login() {
+        this.update(true)
+      },
+      //用户属性选择（找工作&招聘）
+      work(){
+        this.working='rgb(0,154,121)'
+        this.hiring=''
+      },
+      hire(){
+        this.working=''
+        this.hiring='rgb(0,154,121)'
+      },
+      //校验邮箱&密码位数
+      checkEmail(){
+        const email = this.user_email
+        alert(email)
+        if (email === ''){
+          this.beErrorMsg="请正确填写邮箱"
+          this.beError='block'
+          return;
+        }
+        if (email !== ''){
+          var reg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+          if(!reg.test(email)){
+            this.beErrorMsg="请输入有效的邮箱"
+            this.beError='block'
+            return
+          }
+        }
+        this.beError='none'//邮箱校验
+        this.beErrorMsg=''//邮箱提示信息
+
+      },
+      //校验密码
+      checkPwd(){
+        const pwd = this.user_pwd;
+        if (pwd.length <8){
+          this.beErrorMsgPwd="您的密码位数小于8"
+          this.beErrorPwd='block'
+          return;
+        }
+        this.beErrorPwd='none'
+        this.beErrorMsgPwd=''
+
+      },
+
+      //进行注册按钮
+      register(){
+        const email = this.user_email
+        const attr = this.user_attr
+        const pwd = this.user_pwd
+        const ischecked = this.ischecked
+
+        //协议校验
+        if (!ischecked){
+          alert("请查看拉钩用户协议，并进行勾选同意选项")
+          return
+        }
+
+        const  url = `http://localhost:8082/register?UserEmail=${email}&UserPwd=${pwd}&UserAttr=${attr}`;
+
+        console.log(url)
+        axios({
+          url:url,
+          method:'GET'
+        }).then(response => {
+          console.log('/posts post', response.data)
+          console.log(url)
+        }).catch(error=>{
+
+        })
+
+
+
+
+        console.log(this.user_attr)
+        console.log(this.user_email)
+        console.log(this.user_pwd)
+        console.log(this.ischecked)
+      }
+    }
+  }
 </script>
 
 <style>
-
+  .attritute {
+    background: rgb(0,154,121);
+  }
 </style>

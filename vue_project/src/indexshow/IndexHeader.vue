@@ -7,11 +7,12 @@
       <ul id="navheader" class="reset">
         <li><a href="index.html">首页</a></li>
         <li><a href="companylist.html">公司</a></li>
-        <li><a target="_blank" href="h/toForum.html">论坛</a></li>
-        <li class="current"><a rel="nofollow" href="jianli.html">我的简历</a></li>
+        <li><a target="_blank" href="">论坛</a></li>
+        <li><a rel="nofollow" href="">简历管理</a></li>
+        <li class="current"><a rel="nofollow" href="create.html">发布职位</a></li>
       </ul>
 
- 
+
       <dl class="collapsible_menu">
         <dt>
           <span>jason&nbsp;</span>

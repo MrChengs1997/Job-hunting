@@ -1,9 +1,5 @@
 <template>
   <div id="app">
-
-    <IndexShow/>
-
-
     <router-view/>
   </div>
 </template>

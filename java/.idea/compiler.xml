@@ -14,16 +14,9 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="consumer" target="1.8" />
-      <module name="core" target="1.7" />
-      <module name="erueka" target="1.8" />
+      <module name="core" target="1.8" />
+      <module name="erueka" target="8" />
       <module name="provider" target="1.8" />
     </bytecodeTargetLevel>
-  </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="consumer" options="-parameters" />
-      <module name="erueka" options="-parameters" />
-      <module name="provider" options="-parameters" />
-    </option>
   </component>
 </project>

@@ -5,11 +5,12 @@
         <img width="229" height="43" alt="拉勾招聘-专注互联网招聘" src="../style/images/logo.png">
       </a>
       <ul id="navheader" class="reset">
-        <li><a href="#">首页</a></li>
-        <li><a href="#">公司</a></li>
-        <li><a target="_blank" href="">论坛</a></li>
-        <li><a rel="nofollow" href="">简历管理</a></li>
-        <li class="" v-if="isBoss" ><a rel="nofollow" >发布职位</a></li>
+        <li><a @click="updateShowListItem(1)">首页</a></li>
+        <li><a @click="updateShowListItem(2)" v-show="isBoss == true">公司</a></li>
+        <li><a target="_blank"   @click="updateShowListItem(3)">个人中心</a></li>
+        <li><a rel="nofollow" v-show="isBoss == false" @click="updateShowListItem(4)">简历管理</a></li>
+        <li class="" v-show="isBoss == true"  @click="updateShowListItem(5)"><a rel="nofollow" >发布职位</a></li>
+        <li class=""  v-show="isBoss == true" @click="updateShowListItem(6)"><a rel="nofollow" >功能</a></li>
       </ul>
       <dl class="collapsible_menu">
         <dt>
@@ -23,44 +24,34 @@
 </template>
 
 <script>
-  import strogUtil from '../util/strogUtil'
-  import router from 'vue-router'
-
   export default {
+    props:{
+      obj_user:Object,
+      isBoss:Boolean,
+      userMsg:String,
+      updateShowList:{
+        type:Function,
+        required : true
+      }
+    },
     data () {
       return {
-         obj_user : {
-           "resultCode":"",
-           "userAttr":"",
-           "userEmail":"",
-           "userPwd":"",
-           "userId":""
-         },
-        isBoss:"",//判断是否是Boss,进行显示页面的《发布职位》功能
-        userMsg:'',//用于显示是求职责还是BOSS
+
       }
     },
     mounted () {
-      this.obj_user =  strogUtil.readToken();
 
-      if(this.obj_user.userAttr == "" || this.obj_user.resultCode == "" ||
-                this.obj_user.userEmail == "" ||this.obj_user.userId == ""){
-        this.$router.push("/LoginShow")
-      }
-
-      if (this.obj_user.userAttr ==1){
-        this.isBoss = true;
-        this.userMsg = "BOSS"
-      }else {
-        this.isBoss = false
-        this.userMsg ="APPLICANT"
-      }
 
       // setTimeout(() => {
       //
       // }, 1000)
     },
-    methods: {
+    methods:{
+      //用于显示主菜单之后的container
+      // （首页1,公司2，个人中心3，简历4，发布职位5，功能6）
+      updateShowListItem(num){
+        this.updateShowList(num)
+      }
     }
   }
 </script>

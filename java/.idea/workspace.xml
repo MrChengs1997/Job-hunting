@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e702318-1de6-40f8-95cb-2bada6a0666e" name="Default Changelist" comment="core">
-      <change beforePath="$PROJECT_DIR$/../vue_project/src/components/show.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/core.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/core/core.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vue_project/src/indexshow/IndexHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vue_project/src/indexshow/IndexHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue_project/src/indexshow/IndexShow.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vue_project/src/indexshow/IndexShow.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/core/target/" />
     <ignored path="$PROJECT_DIR$/erueka/target/" />
@@ -15,22 +27,80 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="746664120">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.54" value="1" />
+          <entry key="project.open.time.67" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="28" />
+          <entry key="html" value="3" />
+          <entry key="java" value="68" />
+          <entry key="properties" value="9" />
+          <entry key="xml" value="19" />
+          <entry key="yml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="28" />
+          <entry key="HTML" value="3" />
+          <entry key="JAVA" value="68" />
+          <entry key="Properties" value="9" />
+          <entry key="XML" value="19" />
+          <entry key="YAML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="4" />
+          <entry key="html" value="6" />
+          <entry key="java" value="2701" />
+          <entry key="properties" value="182" />
+          <entry key="txt" value="4" />
+          <entry key="xml" value="159" />
+          <entry key="yml" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="6" />
+          <entry key="JAVA" value="2701" />
+          <entry key="PLAIN_TEXT" value="8" />
+          <entry key="Properties" value="182" />
+          <entry key="SQL" value="5" />
+          <entry key="XML" value="154" />
+          <entry key="YAML" value="4" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consumer/src/main/resources/application.properties">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/comtroller/VueLoginAndRegisterController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="32" lean-forward="true" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+            <state relative-caret-position="76">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/consumer/src/main/java/com/consumer/design/controller/VueUserLoginAndRegisterController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
+            <state relative-caret-position="83">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,14 +127,19 @@
       <find>url</find>
       <find>===</find>
       <find>params</find>
-      <find>restTemplate</find>
-      <find>isExistUser</find>
-      <find>RES_CODE</find>
+      <find>1.8</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="D:/soft/gradle/graderepo/spring-framework-5.0.x" value="PREVIEW" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -98,26 +173,30 @@
         <option value="$PROJECT_DIR$/core/src/main/java/core/design/exception/UtilParmeter.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/core/design/exception/UtilFeatures.java" />
         <option value="$PROJECT_DIR$/consumer/src/main/java/com/consumer/design/controller/UserLoginAndRegisterController.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/core/design/util/StatusCode.java" />
         <option value="$PROJECT_DIR$/provider/src/main/java/com/provider/design/mapper/VueLoginAndRegisterMapper.java" />
-        <option value="$PROJECT_DIR$/provider/src/main/java/com/provider/design/service/impl/VueLoginAndRegisterServiceImpl.java" />
         <option value="$PROJECT_DIR$/provider/src/main/java/com/provider/design/service/VueLoginAndRegisterService.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/core/design/pojo/user/UserDetailCodeDto.java" />
-        <option value="$PROJECT_DIR$/provider/src/main/resources/mybatis/mapper/VueLoginAndRegisterMapper.xml" />
-        <option value="$PROJECT_DIR$/core/pom.xml" />
-        <option value="$PROJECT_DIR$/consumer/src/main/java/com/consumer/design/controller/VueUserLoginAndRegisterController.java" />
+        <option value="$PROJECT_DIR$/provider/src/main/java/com/provider/design/service/impl/VueLoginAndRegisterServiceImpl.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/core/design/util/StatusCode.java" />
         <option value="$PROJECT_DIR$/provider/src/main/java/com/provider/design/comtroller/VueLoginAndRegisterController.java" />
-        <option value="$PROJECT_DIR$/provider/mvnw.cmd" />
+        <option value="$PROJECT_DIR$/provider/src/main/resources/mybatis/mapper/VueLoginAndRegisterMapper.xml" />
+        <option value="$PROJECT_DIR$/consumer/src/main/java/com/consumer/design/controller/VueUserLoginAndRegisterController.java" />
         <option value="$PROJECT_DIR$/provider/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/core/pom.xml" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="F:\maven\maven-repository" />
-        <option name="mavenHome" value="F:/maven/apache-maven-3.6.1" />
-        <option name="userSettingsFile" value="F:\maven\apache-maven-3.6.1\conf\settings.xml" />
+        <option name="localRepository" value="D:\Tools\maven\maven-repository" />
+        <option name="mavenHome" value="D:/Tools/maven/mavens" />
+        <option name="userSettingsFile" value="D:\Tools\maven\mavens\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -133,20 +212,20 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="provider" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="consumer" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="provider" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="consumer" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
       </expand>
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="84" />
-    <option name="y" value="9" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="92" />
+    <option name="y" value="13" />
     <option name="width" value="1251" />
     <option name="height" value="683" />
   </component>
@@ -188,71 +267,24 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+      <pane id="ProjectPane">
+        <subPane>
           <expand>
             <path>
-              <item name="java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="consumer" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="consumer" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="consumer" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="consumer" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="core" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="erueka" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="provider" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="provider" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="provider" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="provider" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -263,15 +295,15 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578313327579" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578325228090" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/SecondProject/shipnets" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -329,10 +361,10 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ProviderApplicationTests.contextLoads" />
       <item itemvalue="Spring Boot.EruekaApplication" />
       <item itemvalue="Spring Boot.ProviderApplication" />
       <item itemvalue="Spring Boot.ConsumerApplication" />
+      <item itemvalue="JUnit.ProviderApplicationTests.contextLoads" />
     </list>
     <recent_temporary>
       <list>
@@ -352,7 +384,7 @@
       <updated>1578153067645</updated>
       <workItem from="1578153070950" duration="5663000" />
       <workItem from="1578158898790" duration="26475000" />
-      <workItem from="1578274843259" duration="14810000" />
+      <workItem from="1578320972112" duration="3272000" />
     </task>
     <task id="LOCAL-00001" summary="core">
       <created>1578153193935</created>
@@ -386,7 +418,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46948000" />
+    <option name="totallyTimeSpent" value="35410000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -398,10 +430,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="84" y="9" width="1251" height="683" extended-state="0" />
-    <editor active="true" />
+    <frame x="92" y="13" width="1251" height="683" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2686818" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.089000836" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -410,23 +441,21 @@
       <window_info id="Learn" order="6" weight="0.3290469" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info id="Web" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.86913764" weight="0.33454546" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" visible="true" weight="0.5018182" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.86913764" weight="0.36612022" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.40461537" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.25538462" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32405892" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.26923078" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.43207857" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.21302252" side_tool="true" weight="0.39445302" />
       <window_info anchor="bottom" id="Spring" order="11" weight="0.32923076" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" sideWeight="0.49924356" weight="0.3289689" />
-      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49924356" weight="0.24727273" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32923076" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49924356" weight="0.35076922" />
       <window_info anchor="bottom" id="Run Dashboard" order="14" sideWeight="0.78697747" weight="0.120527305" />
-      <window_info anchor="right" id="Maven" weight="0.32980332" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24962178" />
@@ -439,70 +468,16 @@
       <window_info anchor="right" id="Bean Validation" order="9" />
       <window_info active="true" anchor="right" id="Coverage" order="10" side_tool="true" visible="true" weight="0.32922202" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23146747" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Learn" order="6" weight="0.3290469" />
-      <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info id="Web" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.86913764" weight="0.3096539" />
-      <window_info active="true" anchor="bottom" id="Debug" order="4" sideWeight="0.49924356" visible="true" weight="0.3927987" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.25538462" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32405892" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.26923078" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.43207857" />
-      <window_info anchor="bottom" id="Spring" order="12" weight="0.32923076" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" sideWeight="0.49924356" weight="0.3289689" />
-      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49924356" weight="0.24923077" />
-      <window_info anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.78697747" weight="0.120527305" />
-      <window_info anchor="right" id="Maven" order="0" weight="0.3299748" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.24962178" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" />
-      <window_info anchor="right" id="Maven Projects" order="9" visible="true" weight="0.18807724" />
-      <window_info anchor="right" id="Bean Validation" order="10" />
-      <window_info active="true" anchor="right" id="Coverage" order="11" side_tool="true" visible="true" weight="0.32922202" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="core" />
     <option name="LAST_COMMIT_MESSAGE" value="core" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/consumer/src/main/java/com/consumer/design/controller/VueUserLoginAndRegisterController.java</url>
-          <line>33</line>
-          <properties />
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/comtroller/VueLoginAndRegisterController.java</url>
-          <line>16</line>
-          <properties />
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/erueka/pom.xml">
@@ -543,7 +518,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/crMapper.java" />
     <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/mapper.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/spring/boot/mybatis-spring-boot-autoconfigure/2.1.1/mybatis-spring-boot-autoconfigure-2.1.1.jar!/org/mybatis/spring/boot/autoconfigure/MybatisProperties.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/spring/boot/mybatis-spring-boot-autoconfigure/2.1.1/mybatis-spring-boot-autoconfigure-2.1.1.jar!/org/mybatis/spring/boot/autoconfigure/MybatisProperties.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/config/Stu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -589,15 +570,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/consumer/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/consumer/src/main/java/com/consumer/design/config/RibbonConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#124#125#0" expanded="true" />
-            <element signature="e#165#166#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -616,6 +599,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/provider/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="33" column="2" selection-start-line="33" selection-start-column="2" selection-end-line="38" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/consumer/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -626,6 +616,13 @@
     <entry file="file://$PROJECT_DIR$/core/src/main/java/core/design/exception/UserLoginAndRegisterException.java" />
     <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/mapper/crMapper.java" />
     <entry file="file://$PROJECT_DIR$/provider/src/main/resources/mybatis/mapper/crMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/core/design/pojo/user/UserDetailDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/consumer/src/main/java/com/consumer/design/controller/testcontroller.java" />
     <entry file="file://$PROJECT_DIR$/core/src/main/java/core/design/exception/ParameterException.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -669,6 +666,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/service/impl/VueLoginAndRegisterServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/mapper/VueLoginAndRegisterMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/service/VueLoginAndRegisterService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/provider/src/main/resources/mybatis/mapper/VueLoginAndRegisterMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.2.RELEASE/spring-web-5.2.2.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
@@ -676,128 +701,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/mapper/VueLoginAndRegisterMapper.java">
+    <entry file="file://$PROJECT_DIR$/provider/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/service/VueLoginAndRegisterService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/service/impl/VueLoginAndRegisterServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#745#746#0" expanded="true" />
-            <element signature="e#815#816#0" expanded="true" />
-            <element signature="e#870#871#0" expanded="true" />
-            <element signature="e#931#932#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/core/design/pojo/user/UserDetailDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/provider/src/main/resources/mybatis/mapper/VueLoginAndRegisterMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="8" column="62" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
+        <state relative-caret-position="66">
+          <caret line="3" column="33" lean-forward="true" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/core/design/util/URLUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Tools/maven/maven-repository/org/springframework/spring-core/5.2.2.RELEASE/spring-core-5.2.2.RELEASE-sources.jar!/org/springframework/util/MultiValueMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="31" column="48" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Tools/maven/maven-repository/org/springframework/spring-web/5.2.2.RELEASE/spring-web-5.2.2.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="189" selection-start-line="189" selection-end-line="189" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/core/design/pojo/user/UserDetailCodeDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/provider/mvnw.cmd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/comtroller/VueLoginAndRegisterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/provider/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/provider/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="31" lean-forward="true" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consumer/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="32" lean-forward="true" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        <state relative-caret-position="48">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/consumer/src/main/java/com/consumer/design/controller/VueUserLoginAndRegisterController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        <state relative-caret-position="83">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/comtroller/VueLoginAndRegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -856,7 +787,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>provider</last-edited>
+          <last-edited>core</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

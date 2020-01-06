@@ -17,7 +17,7 @@ public interface VueLoginAndRegisterMapper {
     public int register(UserDetailDto userDetailDto);
 
     //检查账户是否存在
-    public Integer checkUserExist(@Param("email")String email);
+    public UserDetailDto checkUserExist(@Param("email")String email);
 
     //登陆
     public String login(@Param("email")String email );

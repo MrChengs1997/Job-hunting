@@ -120,12 +120,18 @@
         const pwd = this.user_pwd.trim()
         const ischecked = this.ischecked
 
+        //用户属性校验
+        if(attr == ''){
+          alert("请选择用户属性：招聘&找工作")
+          return
+        }
+
         //协议校验
         if (!ischecked){
           alert("请查看拉钩用户协议，并进行勾选同意选项")
           return
         }
-        const  url = `http://localhost:8082/register?UserEmail=${email}&UserPwd=${pwd}&UserAttr=${attr}`;
+        const  url = `http://localhost:8082/vueregister?UserEmail=${email}&UserPwd=${pwd}&UserAttr=${attr}`;
         axios({
           url:url,
           method:'GET'

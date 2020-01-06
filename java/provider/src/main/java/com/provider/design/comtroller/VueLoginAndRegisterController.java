@@ -28,13 +28,13 @@ public class VueLoginAndRegisterController {
     //异常以及失败返回0
     //注册成功返回1
     //注册用户数据已经存在返回2
-    @PostMapping("/register")
+    @PostMapping("/vueregister")
     @ResponseBody
     public int register(@RequestBody UserDetailDto userDetailDto) {
         Integer registerNum = StatusCode.REG_ERR_FAIL_CODE;
         try {
             //检查用户使用已经存在
-            Integer userId = vueLoginAndRegisterService.checkUserExist(userDetailDto.getUserEmail());
+            //UserDetailDto userId = vueLoginAndRegisterService.checkUserExist(userDetailDto.getUserEmail());
 
             if (isExistUser(userDetailDto.getUserEmail())){
                 registerNum = StatusCode.REG_EXIST;
@@ -51,7 +51,8 @@ public class VueLoginAndRegisterController {
 
     }
 
-    @GetMapping("/login")
+    //登录
+    @GetMapping("/vuelogin")
     @ResponseBody
     public String login(String email) {
         String password = null;
@@ -63,12 +64,25 @@ public class VueLoginAndRegisterController {
         return  password;
     }
 
+    //返回用户信息
+    @GetMapping("/vueusermsg")
+    @ResponseBody
+    public UserDetailDto userMsg(String email) {
+        UserDetailDto userDto ;
+        try {
+             userDto = vueLoginAndRegisterService.checkUserExist(email);
+        }catch (Exception e){
+            throw new FeaturesException(UtilFeatures.REGISTER_CODE,UtilFeatures.REGISTER_CODE_DESC);
+        }
+        return  userDto;
+    }
+
 
     public  boolean isExistUser(String email){
 
         boolean isExist = false;
         try {
-            Integer userId = vueLoginAndRegisterService.checkUserExist(email);
+            UserDetailDto userId = vueLoginAndRegisterService.checkUserExist(email);
             if (userId != null ){
                 isExist = true;
             }

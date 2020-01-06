@@ -9,6 +9,8 @@ import VueRouter from "vue-router";
 import LoginShow from '../login/LoginShow'
 import register from '../login/register'
 import login from '../login/login'
+//首页
+import IndexShow from '../indexshow/IndexShow'
 
 //引入vue对象
 import Vue from 'vue'
@@ -20,14 +22,20 @@ export default new VueRouter({
   // 多个配置项
   //由于是多个使用数组进行配置
   routes:[
+    //登录页面
     {
       path:'/LoginShow',
       component :LoginShow
     },
-
+    //注册页面
     {
       path:'/register',
       component :register
+    },
+    //首页
+    {
+      path:'/index',
+      component :IndexShow
     },
     {
       path:'/LoginShow',

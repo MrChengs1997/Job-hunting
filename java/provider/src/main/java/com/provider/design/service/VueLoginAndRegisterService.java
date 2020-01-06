@@ -15,7 +15,7 @@ public interface VueLoginAndRegisterService {
     public int register(UserDetailDto userDetailDto);
 
     //检查账户是否存在
-    public Integer checkUserExist(String email);
+    public UserDetailDto checkUserExist(String email);
 
     //登陆
     public String login(@Param("email")String email );

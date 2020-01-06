@@ -24,7 +24,7 @@ public class VueLoginAndRegisterServiceImpl implements VueLoginAndRegisterServic
     }
 
     @Override
-    public Integer checkUserExist(String email) {
+    public UserDetailDto checkUserExist(String email) {
         return vueLoginAndRegisterMapper.checkUserExist(email);
     }
 

@@ -26,6 +26,7 @@
 <script>
   //引入axios
   import  axios from  'axios'
+  import strogUtil from '../util/strogUtil'
 
   export default {
     props:{
@@ -52,27 +53,37 @@
 
         const  email = this.user_email.trim()
         const  pwd = this.user_pwd.trim()
-        alert(email)
-        alert(pwd)
-        const  url = `http://localhost:8082/login?UserEmail=${email}&UserPwd=${pwd}`;
+
+        const  url = `http://localhost:8082/vuelogin?UserEmail=${email}&UserPwd=${pwd}`;
         axios({
           url:url,
           method:'GET'
         }).then(response => {
 
-          const respdata = response.data
+           let obj = {"resultCode":"","userAttr":"","userEmail":"","userPwd":"","userId":""}
+           obj = JSON.parse(JSON.stringify(response.data))
+            console.log(obj)
 
-          if (respdata == 0){
-           alert("密码错误")
-          }else if (respdata ==1){
+          if (obj.resultCode ==0){
+            alert("密码错误")
+          }else if (obj.resultCode ==1){
             alert("登陆成功")
+            //将数据存入本地
+            strogUtil.saveToken(obj)
+            this.$router.push("/index")
           }
 
-          console.log("===" + respdata)
+          // const respdata = response.data
+          // if (respdata == 0){
+          //  alert("密码错误")
+          // }else if (respdata ==1){
+          //   alert("登陆成功")
+          //   strogUtil.saveToken()
+          // }
+          // console.log("===" + respdata)
         }).catch(error=>{
           alert("服务异常，请联系管理员！")
         })
-
       },
       //登陆邮箱校验
       checkEmail(){

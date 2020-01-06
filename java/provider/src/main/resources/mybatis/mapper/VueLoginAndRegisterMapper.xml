@@ -10,8 +10,10 @@
         values(#{UserEmail},#{UserPwd},#{UserAttr})
     </insert>
 
-    <select id="checkUserExist" parameterType="string" resultType="int">
-        select user_id userId from user_detail where user_email=#{email}
+    <select id="checkUserExist" parameterType="string" resultType="core.design.pojo.user.UserDetailDto">
+
+          select user_id UserId,user_email UserEmail,user_pwd UserPwd,user_attr UserAttr
+          from  user_detail where user_email=#{email}
     </select>
 
     <select id="login" parameterType="string" resultType="string">

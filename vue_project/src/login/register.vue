@@ -1,7 +1,6 @@
 <template>
   <div >
  <div class="login_box">
-
         <form id="loginForm" autocomplete="off" @submit.prevent="register">
           <ul class="register_radio clearfix">
             <li :class="working" @click="work" :style="{background:working}">
@@ -20,11 +19,8 @@
           <span class="error"  :style="{display:beErrorPwd}" >{{beErrorMsgPwd}}</span>
           <label class="fl registerJianJu" for="checkbox">
             <input type="checkbox" v-model="ischecked" id="checkbox" name="checkbox" checked  class="checkbox valid" />我已阅读并同意<a href="h/privacy.html" target="_blank">《拉勾用户协议》</a>
-<!--            <span class="error"  :style="{display:beErrorValid}" >{{beErrorMsgValid}}</span>-->
           </label>
           <button   type="submit" id="submitLogin" > 注册</button>
-<!--          <input type="submit" id="submitLogin" value="注 &nbsp; &nbsp; 册" />-->
-<!--          <a style="color:#fff;"  class="submitLogin" title="">注 &nbsp; &nbsp; 册</a>-->
         </form>
         <div class="login_right">
           <div>已有拉勾帐号</div>
@@ -37,7 +33,6 @@
       <div class="login_box_btm"></div>
   </div>
 </template>
-
 <script>
   //引入axios
   import  axios from  'axios'

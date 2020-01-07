@@ -12,7 +12,7 @@
     </div>
 
     <div v-if="showList ==3">
-        <personList/>
+        <personList :obj_user="obj_user" :userMsg="userMsg" />
     </div>
 
     <div v-if="showList ==4">
@@ -53,7 +53,7 @@
           "userId":""
         },
         isBoss:"",//判断是否是Boss,进行显示页面的《发布职位》功能
-        userMsg:'',//用于显示是求职责还是BOSS
+        userMsg:'',//用于显示是APPLICANT还是BOSS
         showList:1,//用于显示主菜单之后的container（首页1,公司2，个人中心3，简历4，发布职位5，功能6）
       }
     },

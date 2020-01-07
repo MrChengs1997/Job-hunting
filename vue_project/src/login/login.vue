@@ -72,15 +72,6 @@
             strogUtil.saveToken(obj)
             this.$router.push("/index")
           }
-
-          // const respdata = response.data
-          // if (respdata == 0){
-          //  alert("密码错误")
-          // }else if (respdata ==1){
-          //   alert("登陆成功")
-          //   strogUtil.saveToken()
-          // }
-          // console.log("===" + respdata)
         }).catch(error=>{
           alert("服务异常，请联系管理员！")
         })

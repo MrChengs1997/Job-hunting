@@ -6,5 +6,9 @@ export default {
   },
   readToken(){
     return JSON.parse(window.localStorage.getItem(TODO_key) || '[]')
+  },
+  removeToken(){
+    window.localStorage.clear()
   }
+
 }

@@ -6,4 +6,12 @@ public class UtilFeatures {
     public  static String REGISTER_CODE = "2001";
     public  static String REGISTER_CODE_DESC = "注册功能失败";
 
+
+    //更改密码失败
+    public  static String UP_PWD_CODE = "2002";
+    public  static String UP_PWD_CODE_DESC = "更改密码接口失败";
+
+
+
+
 }

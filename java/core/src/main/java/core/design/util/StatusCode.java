@@ -11,6 +11,10 @@ public class StatusCode {
     public  static  Integer LOG_SUCCESS_DOCE = 1;//密码正确
     public  static  Integer LOG_FAILD_DOCE = 0;//密码错误
 
+    //修改密码状态返回码
+    public  static  Integer UP_PWD_SUCCESS = 1;//修改成功
+    public  static  Integer UP_PWD_FAILD = 0;//修改失败
+
 
 
 

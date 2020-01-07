@@ -13,7 +13,7 @@
         <dd>
           <form id="stepForm">
             <div class="c_text_1">基本信息为必填项，是求职者加速了解公司的窗口，认真填写吧！</div>
-            <img width="668" height="56" class="c_steps" alt="第一步" src="style/images/step1.png">
+<!--            <img width="668" height="56" class="c_steps" alt="第一步" src="../../style/images/step1.png">-->
 
             <h3>公司全称 <span>福建平潭协创进出口贸易有限公司</span></h3>
 
@@ -22,6 +22,7 @@
 
             <h3>公司LOGO</h3> <!--非必填改必填-->
             <div class="c_logo c_logo_pos">
+              <input type="file" class="inline cboxElement" >
               <a title="上传公司LOGO" class="inline cboxElement" href="#logoUploader">
                 <div id="logoNo">
                   <span>上传公司LOGO</span> <br>
@@ -43,101 +44,57 @@
 
             <h3>行业领域</h3>
             <div>
-              <input type="hidden" value="" name="select_industry_hidden" id="select_industry_hidden">
-              <input type="button" value="请选择行业领域" name="select_industry" id="select_industry" class="select">
-              <div class="dn" id="box_industry" style="display: none;">
-                <ul class="reset">
-                  <li>移动互联网</li>
-                  <li>电子商务</li>
-                  <li>社交</li>
-                  <li>企业服务</li>
-                  <li>O2O</li>
-                  <li>教育</li>
-                  <li>文化艺术</li>
-                  <li>游戏</li>
-                  <li>在线旅游</li>
-                  <li>金融互联网</li>
-                  <li>健康医疗</li>
-                  <li>生活服务</li>
-                  <li>硬件</li>
-                  <li>搜索</li>
-                  <li>安全</li>
-                  <li>运动体育</li>
-                  <li>云计算\大数据</li>
-                  <li>移动广告</li>
-                  <li>社会化营销</li>
-                  <li>视频多媒体</li>
-                  <li>媒体</li>
-                  <li>智能家居</li>
-                  <li>智能电视</li>
-                  <li>分类信息</li>
-                  <li>招聘</li>
-                </ul>
-              </div>
+              <select id="select_industry" class="select">
+                <option value="a.html">移动互联网</option>
+                <option value="a.html">电子商务</option>
+                <option value="a.html">社交</option>
+                <option value="a.html">O2O</option>
+                <option value="a.html">教育</option>
+                <option value="a.html">文化艺术</option>
+                <option value="a.html">游戏</option>
+                <option value="a.html">在线旅游</option>
+                <option value="a.html">金融互联网</option>
+                <option value="a.html">健康医疗</option>
+                <option value="a.html">生活服务</option>
+                <option value="b.html">硬件</option>
+                <option value="b.html">搜索</option>
+                <option value="b.html">安全</option>
+                <option value="b.html">运动体育</option>
+                <option value="b.html">云计算\大数据</option>
+                <option value="b.html">移动广告</option>
+                <option value="b.html">社会化营销</option>
+                <option value="b.html">视频多媒体</option>
+                <option value="b.html">媒体</option>
+                <option value="b.html">视频多媒体</option>
+                <option value="b.html">智能家居</option>
+                <option value="b.html">分类信息</option>
+                <option value="b.html">智能电视</option>
+                <option value="b.html">招聘</option>
+              </select>
             </div>
 
             <h3>公司规模</h3>
             <div>
-              <input type="hidden" value="" name="select_scale_hidden" id="select_scale_hidden">
-              <input type="button" value="请选择公司规模" id="select_scale" class="select">
-              <div class="dn" id="box_scale" style="display: none;">
-                <ul class="reset">
-                  <li>少于15人</li>
-                  <li>15-50人</li>
-                  <li>50-150人</li>
-                  <li>150-500人</li>
-                  <li>500-2000人</li>
-                  <li>2000人以上</li>
-                </ul>
-              </div>
+              <select id="select_industry1" class="select">
+                <option value="a.html">少于15人</option>
+                <option value="a.html">15-50人</option>
+                <option value="a.html">50-150人</option>
+                <option value="a.html">150-500人</option>
+                <option value="a.html">500-2000人</option>
+                <option value="a.html">2000人以上</option>
+              </select>
             </div>
 
             <h3>发展阶段</h3>
             <div>
-              <input type="hidden" id="s_radio_hidden" name="s_radio_hidden" value="">
-              <ul class="s_radio clearfix s_radio_ex">
-                <li>未融资</li>
-                <li>天使轮</li>
-                <li>A轮</li>
-                <li>B轮</li>
-                <li>C轮</li>
-                <li>D轮及以上</li>
-                <li>上市公司</li>
-              </ul>
-            </div>
-
-            <h3>投资机构</h3>
-            <ul id="stagesList" class="reset">
-              <li>
-                <input type="hidden" class="select_invest_hidden" name="select_invest_hidden">
-                <input type="button" value="请选择发展阶段" class="select_short select_invest">
-                <div class="box_invest dn" style="display: none;">
-                  <ul class="reset">
-                    <li>天使轮</li>
-                    <li>A轮</li>
-                    <li>B轮</li>
-                    <li>C轮</li>
-                    <li>D轮及以上</li>
-                    <li>上市公司</li>
-                  </ul>
-                </div>
-                <input type="text" placeholder="请输入投资机构，如真格基金，创新工场" name="stageorg">
-              </li>
-            </ul>
-            <div class="dn" id="cloneInvest">
-              <input type="hidden" class="select_invest_hidden" name="select_invest_hidden">
-              <input type="button" value="请选择发展阶段" class="select_short select_invest">
-              <div class="box_invest dn">
-                <ul class="reset">
-                  <li>天使轮</li>
-                  <li>A轮</li>
-                  <li>B轮</li>
-                  <li>C轮</li>
-                  <li>D轮及以上</li>
-                  <li>上市公司</li>
-                </ul>
-              </div>
-              <input type="text" placeholder="请输入投资机构，如真格基金，创新工场" name="stageorg">
+              <select  class="select">
+                <option value="a.html">天使轮</option>
+                <option value="a.html">A轮</option>
+                <option value="a.html">B轮</option>
+                <option value="a.html">C轮</option>
+                <option value="a.html">D轮及以上</option>
+                <option value="a.html">上市公司</option>
+              </select>
             </div>
 
             <h3>一句话介绍</h3>
@@ -151,42 +108,16 @@
       </dl>
     </div>
 
-    <!-------------------------------------弹窗lightbox  ----------------------------------------->
-    <div style="display:none;">
-      <!--图片上传-->
-      <div style="width:650px;height:470px;" class="popup" id="logoUploader">
-        <object width="650" height="470" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="FlashID">
-          <param value="../../flash/avatar.swf?url=http://www.lagou.com/cd/saveProfileLogo.json" name="movie">
-          <param value="high" name="quality">
-          <param value="opaque" name="wmode">
-          <param value="111.0.0.0" name="swfversion">
-          <!-- 此 param 标签提示使用 Flash Player 6.0 r65 和更高版本的用户下载最新版本的 Flash Player。如果您不想让用户看到该提示，请将其删除。 -->
-          <param value="../../Scripts/expressInstall.swf" name="expressinstall">
-          <!-- 下一个对象标签用于非 IE 浏览器。所以使用 IECC 将其从 IE 隐藏。 -->
-          <!--[if !IE]>-->
-          <object width="650" height="470" data="../../flash/avatar.swf?url=http://www.lagou.com/cd/saveProfileLogo.json" type="application/x-shockwave-flash">
-            <!--<![endif]-->
-            <param value="high" name="quality">
-            <param value="opaque" name="wmode">
-            <param value="111.0.0.0" name="swfversion">
-            <param value="../../Scripts/expressInstall.swf" name="expressinstall">
-            <!-- 浏览器将以下替代内容显示给使用 Flash Player 6.0 和更低版本的用户。 -->
-            <div>
-              <h4>此页面上的内容需要较新版本的 Adobe Flash Player。</h4>
-              <p><a href="http://www.adobe.com/go/getflashplayer"><img width="112" height="33" src="style/images/get_flash_player.gif" alt="获取 Adobe Flash Player"></a></p>
-            </div>
-            <!--[if !IE]>-->
-          </object>
-          <!--<![endif]-->
-        </object>
-      </div><!-- #logoUploader -->
-    </div>
-    <!------------------------------------- end ----------------------------------------->
     <div class="clear"></div>
   </div>
 </template>
 
 <script>
+  import '../../style/css/style.css'
+  import '../../style/css/external.min.css'
+  import '../../style/css/popup.css'
+  import '../../style/css/popup.css'
+
     export default {}
 </script>
 

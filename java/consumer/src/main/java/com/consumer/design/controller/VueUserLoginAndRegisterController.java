@@ -59,7 +59,7 @@ public class VueUserLoginAndRegisterController {
 
         try {
             String baseUrl = "http://PROVIDER/vuelogin";
-            MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
+            MultiValueMap<String, String> params = new LinkedMultiValueMap<String, String>();
             params.add("email",userDetailDto.getUserEmail());
             UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(baseUrl);
             URI uri = builder.queryParams(params).build().encode().toUri();

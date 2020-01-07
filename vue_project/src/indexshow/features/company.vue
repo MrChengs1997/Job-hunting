@@ -13,16 +13,16 @@
         <dd>
           <form id="stepForm">
             <div class="c_text_1">基本信息为必填项，是求职者加速了解公司的窗口，认真填写吧！</div>
-<!--            <img width="668" height="56" class="c_steps" alt="第一步" src="../../style/images/step1.png">-->
 
-            <h3>公司全称 <span>福建平潭协创进出口贸易有限公司</span></h3>
+            <h3>公司全称</h3>
+            <input type="text" placeholder="请输入公司简称，如:拉勾" value="" name="name"  class="valid">
 
             <h3>公司简称</h3> <!--非必填-->
-            <input type="text" placeholder="请输入公司简称，如:拉勾" value="" name="name" id="name" class="valid">
+            <input type="text" placeholder="请输入公司简称，如:拉勾" value="" name="name"  class="valid">
 
             <h3>公司LOGO</h3> <!--非必填改必填-->
             <div class="c_logo c_logo_pos">
-              <input type="file" class="inline cboxElement" >
+              <input type="file" class="inline cboxElement" id="file" @change="preview($event)" />
               <a title="上传公司LOGO" class="inline cboxElement" href="#logoUploader">
                 <div id="logoNo">
                   <span>上传公司LOGO</span> <br>
@@ -102,7 +102,7 @@
             <span style="display:none;" class="error" id="beError"></span>
             <input type="hidden" id="companyId" name="companyId" value="25927">
             <input type="hidden" id="companyName" name="companyName" value="福建平潭协创进出口贸易有限公司">
-            <input type="submit" value="保存，下一步" id="stepBtn" class="btn_big fr">
+            <input type="submit" @click.prevent="submitCompany()" value="保存信息" id="stepBtn" class="btn_big fr">
           </form>
         </dd>
       </dl>
@@ -118,7 +118,31 @@
   import '../../style/css/popup.css'
   import '../../style/css/popup.css'
 
-    export default {}
+    export default {
+      data(){
+        return{
+          fileName:'',
+          imgDataUrl:''
+        }
+      },
+      methods:{
+        submitCompany(){
+          console.log(this.imgDataUrl)
+          //preview(event)
+
+        },
+        preview(event){
+          var file = event.target.files[0]
+          console.log(file)
+          console.log(file.imgUrl)
+
+        },
+
+
+      }
+
+
+    }
 </script>
 
 <style>

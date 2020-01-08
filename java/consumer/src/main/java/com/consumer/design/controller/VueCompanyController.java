@@ -29,21 +29,19 @@ public class VueCompanyController {
     RestTemplate restTemplate;
 
     //获取company详细细信息
-    @GetMapping("/vuegetcompany/{email}")
+    @GetMapping("/vuegetcompanymsg/{email}")
     public CompanyDetailDto getCompany(@PathVariable("email")String email){
 
         CompanyDetailDto companyDetailDto = null;
         try {
-            String companyDtoJson = restTemplate.getForObject("http://PROVIDER/vuegetcompany/" + email, String.class);
+            String companyDtoJson = restTemplate.getForObject("http://PROVIDER/vuegetcompanymsg/" + email, String.class);
 
             companyDetailDto= JSON.parseObject(companyDtoJson, CompanyDetailDto.class);
 
         }catch (Exception e){
-
         }
 
-
-        return  null;
+        return  companyDetailDto;
     }
 
 

@@ -2,7 +2,8 @@
 
   <div>
     <IndexHeader :obj_user="obj_user" :showCompany="showCompany"
-                 :updateShowList="updateShowList" :updateShowCompany="updateShowCompany"  :isBoss="isBoss"  :userMsg="userMsg"/>
+                 :updateShowList="updateShowList" :updateShowCompany="updateShowCompany"  :isBoss="isBoss"  :userMsg="userMsg"
+                :company="company" :updateCompany="updateCompany"/>
 
     <div v-if="showList ==1">
       <IndexContainer/>
@@ -10,7 +11,7 @@
 
     <div v-if="showList ==2">
         <div v-if="showCompany ==1"><company :obj_user="obj_user" :showCompany="showCompany" :updateShowCompany="updateShowCompany"/></div>
-        <div v-if="showCompany ==2"><companymsg/></div>
+        <div v-if="showCompany ==2"><companymsg :company="company"/></div>
         <div v-if="showCompany ==3"><companyAuth/></div>
     </div>
 
@@ -55,6 +56,19 @@
         userMsg:'',//用于显示是APPLICANT还是BOSS
         showList:1,//用于显示主菜单之后的container（首页1,公司2，个人中心3，简历4，发布职位5，功能6）
         showCompany:'',//y用于显示公司页面（1：没有创建的时候进行创建页面，2如果已经创建好了进行显示公司信息页面）
+        company:{
+          'CompanyId':'',
+          'CompanyUserId':'',
+          'companyWholeName':'',
+          'compamyShortName':'',
+          'companyWebsite':'',
+          'companyLocation':'',
+          'companyField':'',
+          'companySize':'',
+          'companyDevelopment':'',
+          'companyProfile':'',
+          'companyCeo':'',
+        }
       }
     },
     methods:{
@@ -66,32 +80,26 @@
       updateShowCompany(num){
         this.showCompany = num
       },
-
-
-
-
-
+      //更新company
+      updateCompany(obj){
+        this.company.CompanyId = obj.CompanyId
+        this.company.CompanyUserId = obj.CompanyUserId
+        this.company.companyWholeName = obj.companyWholeName
+        this.company.compamyShortName = obj.compamyShortName
+        this.company.companyWebsite = obj.companyWebsite
+        this.company.companyLocation = obj.companyLocation
+        this.company.companyField = obj.companyField
+        this.company.companySize = obj.companySize
+        this.company.companyDevelopment = obj.companyDevelopment
+        this.company.companyProfile = obj.companyProfile
+        this.company.companyCeo = obj.companyCeo
+      }
 
 
   },
     mounted () {
       this.obj_user =  strogUtil.readToken();
       console.log(this.obj_user.userEmail + "===")
-
-
-      //发布订阅模式：显示用户数据页面的数据
-      PubSub.subscribeOnce("showCompanyMoreMsg",function () {
-       // const email = this.obj_user.userEmail
-        const  url = `http://localhost:8082/vuegetcompany/email=${strogUtil.readToken().userEmail}`;
-        axios({
-          url:url,
-          method:'GET'
-        }).then(response => {
-          const  code = response.data
-          console.log("===" + code)
-        }).catch(error=>{
-        })
-      })
 
 
       if (this.obj_user.userAttr ==1){

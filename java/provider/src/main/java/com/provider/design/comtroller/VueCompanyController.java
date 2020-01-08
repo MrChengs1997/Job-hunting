@@ -72,7 +72,7 @@ public class VueCompanyController {
 
 
     //根据员工emial返回公司信息
-    @GetMapping("/vuegetcompany/{email}")
+    @GetMapping("/vuegetcompanymsg/{email}")
     public CompanyDetailDto getCompany(@PathVariable("email")String email){
         int a = 1;
 

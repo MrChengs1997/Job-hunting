@@ -42,7 +42,12 @@
       updateShowCompany:{
         type:Function,
         required : true
-      }
+      },
+      company:Object,
+      updateCompany:{
+        type:Function,
+        required : true
+      },
     },
     data () {
       return {
@@ -74,8 +79,23 @@
               this.updateShowCompany(3)
             }
             if (code ==2){
-              //发布订阅模式：显示用户数据页面的数据
-              PubSub.publish('showCompanyMoreMsg',2)
+
+              //进行查询公司信息
+              const  url = `http://localhost:8082/vuegetcompanymsg/${email}`;
+              axios({
+                url:url,
+                method:'GET'
+              }).then(response => {
+
+                console.log(JSON.stringify(response.data) + "json")
+                var obj = JSON.parse(JSON.stringify(response.data))
+                console.log(obj + "obj")
+                this.updateCompany(obj)
+                console.log(this.company.companyWholeName + 'this')
+                console.log(obj.companyWholeName + 'obj')
+              }).catch(error=>{
+              })
+
               this.updateShowCompany(2)//公司信息页面详情
             }
           }).catch(error=>{

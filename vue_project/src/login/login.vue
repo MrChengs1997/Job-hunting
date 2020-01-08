@@ -51,6 +51,8 @@
       },
       toIndex(){
 
+        alert("denglu")
+
         const  email = this.user_email.trim()
         const  pwd = this.user_pwd.trim()
 

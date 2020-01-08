@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.provider.design.mapper.VueCompanyMaper">
+
+    <!--根据用户email查询公司全部信息-->
+    <select id="selectCompanyByUserEmail" parameterType="string" resultType="core.design.pojo.company.CompanyDetailDto">
+        SELECT
+        com_id CompanyId,com_user_id CompanyUserId,com_whole_name companyWholeName,
+        com_short_name compamyShortName,com_website companyWebsite,com_location companyLocation,
+        com_field companyField,com_size companySize,com_development companyDevelopment,
+        com_profile companyProfile,com_ceo companyCeo,com_auto companyAuto
+        from company_detail
+        WHERE com_user_id = (SELECT user_id from user_detail where user_email = #{email})
+    </select>
+
+
+    <insert id="addCompany" parameterType="core.design.pojo.company.CompanyDetailDto">
+        INSERT into
+        company_detail(com_user_id,com_whole_name,com_short_name,com_website,com_location,
+        com_field,com_size,com_development,com_profile,com_ceo,com_auto)
+        VALUES(#{CompanyUserId},#{companyWholeName},#{compamyShortName},
+        #{companyWebsite},#{companyLocation},#{companyField},#{companySize},
+        #{companyDevelopment},#{companyProfile},#{companyCeo},#{companyAuto})
+    </insert>
+
+
+
+</mapper>

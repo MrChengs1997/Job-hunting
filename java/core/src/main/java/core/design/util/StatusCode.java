@@ -15,6 +15,11 @@ public class StatusCode {
     public  static  Integer UP_PWD_SUCCESS = 1;//修改成功
     public  static  Integer UP_PWD_FAILD = 0;//修改失败
 
+    //检验当前用户是否已经绑定公司
+    public  static  Integer COM_NOT_APP = 0;//没有申请绑定公司->0
+    public  static  Integer COM_APP_APP = 1;//申请绑定公司正在审批->1
+    public  static  Integer COM_APP_SUCCESS = 2;//申请通过->2
+
 
 
 

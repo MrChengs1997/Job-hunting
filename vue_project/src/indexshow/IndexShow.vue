@@ -40,7 +40,7 @@
   import companymsg from './features/companymsg'
   import companyAuth from './features/companyAuth'
   import  axios from  'axios'
-
+  import PubSub from 'pubsub-js'
   export default {
     data () {
       return {
@@ -65,12 +65,34 @@
       //传递给IndexHeader组件计算showCompany值进行公司页面的显示
       updateShowCompany(num){
         this.showCompany = num
-      }
+      },
+
+
+
+
+
 
 
   },
     mounted () {
       this.obj_user =  strogUtil.readToken();
+      console.log(this.obj_user.userEmail + "===")
+
+
+      //发布订阅模式：显示用户数据页面的数据
+      PubSub.subscribeOnce("showCompanyMoreMsg",function () {
+       // const email = this.obj_user.userEmail
+        const  url = `http://localhost:8082/vuegetcompany/email=${strogUtil.readToken().userEmail}`;
+        axios({
+          url:url,
+          method:'GET'
+        }).then(response => {
+          const  code = response.data
+          console.log("===" + code)
+        }).catch(error=>{
+        })
+      })
+
 
       if (this.obj_user.userAttr ==1){
         this.isBoss = true;
@@ -79,6 +101,7 @@
         this.isBoss = false
         this.userMsg ="APPLICANT"
       }
+
 
 
     },

@@ -71,6 +71,17 @@ public class VueCompanyController {
     }
 
 
+    //根据员工emial返回公司信息
+    @GetMapping("/vuegetcompany/{email}")
+    public CompanyDetailDto getCompany(@PathVariable("email")String email){
+        int a = 1;
+
+        CompanyDetailDto companyDetailDto = selectCompanyByUserEmail(email);
+        int ba = 1;
+        return  companyDetailDto;
+    }
+
+
 
     //根据员工email查询公司详情
     public CompanyDetailDto selectCompanyByUserEmail(String email){

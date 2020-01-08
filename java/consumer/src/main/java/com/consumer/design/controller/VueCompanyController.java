@@ -28,6 +28,25 @@ public class VueCompanyController {
     @Autowired
     RestTemplate restTemplate;
 
+    //获取company详细细信息
+    @GetMapping("/vuegetcompany/{email}")
+    public CompanyDetailDto getCompany(@PathVariable("email")String email){
+
+        CompanyDetailDto companyDetailDto = null;
+        try {
+            String companyDtoJson = restTemplate.getForObject("http://PROVIDER/vuegetcompany/" + email, String.class);
+
+            companyDetailDto= JSON.parseObject(companyDtoJson, CompanyDetailDto.class);
+
+        }catch (Exception e){
+
+        }
+
+
+        return  null;
+    }
+
+
     //添加company
     @PostMapping("/vueaddcompany/{email}")
     public  Integer addConpany(@RequestBody @Valid CompanyDetailDto companyDetailDto,

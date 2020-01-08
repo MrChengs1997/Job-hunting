@@ -26,6 +26,9 @@
 <script>
   import axios from 'axios'
 
+  //PubSub库
+  import PubSub from 'pubsub-js'
+
   export default {
     props:{
       obj_user:Object,
@@ -47,11 +50,6 @@
       }
     },
     mounted () {
-
-
-      // setTimeout(() => {
-      //
-      // }, 1000)
     },
     methods:{
       //用于显示主菜单之后的container
@@ -76,7 +74,9 @@
               this.updateShowCompany(3)
             }
             if (code ==2){
-              this.updateShowCompany(2)
+              //发布订阅模式：显示用户数据页面的数据
+              PubSub.publish('showCompanyMoreMsg',2)
+              this.updateShowCompany(2)//公司信息页面详情
             }
           }).catch(error=>{
           })

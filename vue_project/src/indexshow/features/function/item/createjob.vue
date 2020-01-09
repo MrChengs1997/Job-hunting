@@ -264,7 +264,6 @@ import strogUtil from '../../../../util/strogUtil'
 
             alert('添加JOB成功')
           }
-
         })
 
       }

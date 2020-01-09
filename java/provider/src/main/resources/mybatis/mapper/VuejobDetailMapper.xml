@@ -10,7 +10,7 @@
     job_salary_max,job_city,job_exper,job_educ,job_desc,job_exist,job_create_date,job_end_date,job_address)
     VALUES(#{JobComId},#{JobUserId},#{JobCategory},#{JobName},#{JobDept},#{JobNature},
     #{JobSalaryMin},#{JobSalaryMax},#{JobCity},#{JobExper},#{JobEduc},#{JobDesc},
-    #{JobExist},#{JobCreateDate},#{JobEndDate},#{JobAddress})
+    #{JobExist},now(),#{JobEndDate},#{JobAddress})
   </insert>
 
 
@@ -23,7 +23,7 @@
       job_end_date JobEndDate,job_address JobAddress
       from job_detail
       where job_user_id = #{value}
-      ORDER BY JobCreateDate
+      ORDER BY JobCreateDate desc
   </select>
 
 

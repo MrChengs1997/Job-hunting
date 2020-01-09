@@ -77,6 +77,8 @@
 
   //有效职位&下线职位
   import effectiveJob from './item/effectiveJob'
+  import strogUtil from '../../../util/strogUtil'
+  import axios from 'axios'
 
   export default {
     data(){
@@ -100,9 +102,38 @@
         //待处理&已通知面试
         if (id == 1){
           this.showdiffjobCode = 0;
+
+          const userId = strogUtil.readToken().userId
+          const  url = `http://localhost:8082/vueaddjob/${userId}/0`;
+
+          //有效职位
           if (num ==1){//站位标识修改页面数据
+            //
             this.showdiffjobCode = 1;
+
+            const  url = `http://localhost:8082/vueaddjob/${userId}/1`;
+            axios({
+              url:url,
+              method:'GET',
+              data:param
+            }).then(response => {
+              const  code = response.data
+            })
+
           }
+
+
+          //查询已经下线的招聘数据
+          axios({
+            url:url,
+            method:'GET',
+            data:param
+          }).then(response => {
+            const  code = response.data
+          })
+
+
+
         }
 
       }

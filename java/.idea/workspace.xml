@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e702318-1de6-40f8-95cb-2bada6a0666e" name="Default Changelist" comment="core">
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/core/design/exception/UtilParmeter.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/core/design/exception/UtilParmeter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/core/design/util/StatusCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/core/design/util/StatusCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/src/main/resources/mybatis/mapper/VuejobDetailMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/resources/mybatis/mapper/VuejobDetailMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue_project/src/indexshow/features/function/functionShow.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vue_project/src/indexshow/features/function/functionShow.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue_project/src/indexshow/features/function/item/createjob.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vue_project/src/indexshow/features/function/item/createjob.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue_project/src/indexshow/features/function/item/effectiveJob.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vue_project/src/indexshow/features/function/item/effectiveJob.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/core/target/" />
     <ignored path="$PROJECT_DIR$/erueka/target/" />
@@ -19,22 +20,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/provider/src/main/resources/mybatis/mapper/VuejobDetailMapper.xml">
+        <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/comtroller/VuejobDetailController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+            <state relative-caret-position="303">
+              <caret line="46" column="21" lean-forward="true" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/comtroller/VuejobDetailController.java">
+        <entry file="file://$PROJECT_DIR$/provider/src/main/resources/mybatis/mapper/VuejobDetailMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="292">
+              <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -42,23 +43,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/consumer/src/main/java/com/consumer/design/controller/VuejobDetailController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="281">
+              <caret line="66" selection-start-line="66" selection-end-line="66" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1438#1454#0" expanded="true" />
                 <element signature="method#checkJobParamer#0;class#VuejobDetailController#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/core/design/pojo/job/JobDetailDto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="25" column="29" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -154,11 +144,11 @@
         <option value="$PROJECT_DIR$/provider/src/main/java/com/provider/design/comtroller/VueCompanyController.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/core/design/util/StatusCode.java" />
         <option value="$PROJECT_DIR$/consumer/src/main/java/com/consumer/design/controller/VuejobDetailController.java" />
-        <option value="$PROJECT_DIR$/provider/src/main/resources/mybatis/mapper/VuejobDetailMapper.xml" />
         <option value="$PROJECT_DIR$/provider/src/main/java/com/provider/design/mapper/VuejobDetailMapper.java" />
         <option value="$PROJECT_DIR$/provider/src/main/java/com/provider/design/service/VuejobDetailService.java" />
         <option value="$PROJECT_DIR$/provider/src/main/java/com/provider/design/service/impl/VuejobDetailServiceImpl.java" />
         <option value="$PROJECT_DIR$/provider/src/main/java/com/provider/design/comtroller/VuejobDetailController.java" />
+        <option value="$PROJECT_DIR$/provider/src/main/resources/mybatis/mapper/VuejobDetailMapper.xml" />
       </list>
     </option>
   </component>
@@ -180,13 +170,27 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="consumer" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="consumer" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="java_core" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="110" />
+    <option name="y" value="23" />
     <option name="width" value="1251" />
     <option name="height" value="660" />
   </component>
@@ -289,11 +293,6 @@
               <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="design" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="java" type="b2602c69:ProjectViewProjectNode" />
@@ -413,7 +412,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578569934790" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578571215045" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="D:/SecondProject/shipnets" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -509,7 +508,7 @@
       <workItem from="1578407178680" duration="3129000" />
       <workItem from="1578446552040" duration="23529000" />
       <workItem from="1578494872768" duration="3511000" />
-      <workItem from="1578533509456" duration="12196000" />
+      <workItem from="1578533509456" duration="13180000" />
     </task>
     <task id="LOCAL-00001" summary="core">
       <created>1578153193935</created>
@@ -543,7 +542,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91084000" />
+    <option name="totallyTimeSpent" value="92068000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -558,7 +557,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.06732224" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10438729" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -569,8 +568,8 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.86913764" weight="0.56102" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49848714" visible="true" weight="0.198036" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.86913764" weight="0.33551556" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49848714" visible="true" weight="0.28805238" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.25538462" />
@@ -1006,31 +1005,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/provider/src/main/resources/mybatis/mapper/VuejobDetailMapper.xml">
+    <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/comtroller/VuejobDetailController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+        <state relative-caret-position="303">
+          <caret line="46" column="21" lean-forward="true" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/consumer/src/main/java/com/consumer/design/controller/VuejobDetailController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="281">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1438#1454#0" expanded="true" />
             <element signature="method#checkJobParamer#0;class#VuejobDetailController#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/comtroller/VuejobDetailController.java">
+    <entry file="file://$PROJECT_DIR$/provider/src/main/resources/mybatis/mapper/VuejobDetailMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="292">
+          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
         </state>
       </provider>
     </entry>

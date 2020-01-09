@@ -2,7 +2,6 @@
     <div>
       <dl class="company_center_content">
         <dt>
-
               <h1 v-if="showdiffjobCode ==1">
                 <em></em>
                 有效职位
@@ -11,7 +10,6 @@
                 <em></em>
                 已下线职位
               </h1>
-
         </dt>
         <dd>
           <form id="searchForm">

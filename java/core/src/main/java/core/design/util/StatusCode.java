@@ -21,6 +21,11 @@ public class StatusCode {
     public  static  Integer COM_APP_SUCCESS = 2;//申请通过->2
 
 
+    //插入job数据返回状态码
+    public  static  Integer JOB_SUCCESS = 1;//没有申请绑定公司->0
+    public  static  Integer JOB_FAILD = 0;//申请绑定公司正在审批->1
+
+
 
 
 }

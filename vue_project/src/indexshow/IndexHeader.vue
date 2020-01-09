@@ -9,7 +9,6 @@
         <li><a @click="updateShowListItem(2)"  v-show="isBoss == true">公司</a></li>
         <li><a target="_blank"   @click="updateShowListItem(3)">个人中心</a></li>
         <li><a rel="nofollow" v-show="isBoss == false" @click="updateShowListItem(4)">简历管理</a></li>
-        <li class="" v-show="isBoss == true"  @click="updateShowListItem(5)"><a rel="nofollow" >发布职位</a></li>
         <li class=""  v-show="isBoss == true" @click="updateShowListItem(6)"><a rel="nofollow" >功能</a></li>
       </ul>
       <dl class="collapsible_menu">

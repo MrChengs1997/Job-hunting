@@ -22,10 +22,8 @@
     <div v-if="showList ==4">
     </div>
 
-    <div v-if="showList ==5">
-    </div>
-
     <div v-if="showList ==6">
+      <functionShow/>
     </div>
 
     <IndexFooter/>
@@ -42,6 +40,7 @@
   import companyAuth from './features/companyAuth'
   import  axios from  'axios'
   import PubSub from 'pubsub-js'
+  import functionShow from './features/function/functionShow'
   export default {
     data () {
       return {
@@ -115,7 +114,7 @@
     },
     components :{
       IndexHeader,IndexContainer,IndexFooter,company,personList,companymsg,
-      companyAuth
+      companyAuth,functionShow
     }
   }
 </script>

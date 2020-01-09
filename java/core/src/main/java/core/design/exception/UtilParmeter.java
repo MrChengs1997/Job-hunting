@@ -46,7 +46,41 @@ public class UtilParmeter {
     public static String COM_CEO_CODE = "1011";
     public static String COM_CEO_DESC = "公司CEO不能为空";
 
-    public static String COM_WEB_CODE = "1011";
+    public static String COM_WEB_CODE = "1012";
     public static String COM_WEB_DESC = "公司g官网不能为空";
+
+    //JOB判断
+    public static String JOB_ADDRESS_CODE = "1013";
+    public static String JOB_ADDRESS_DESC = "工作地点不能为空";
+
+    public static String JOB_CATA_CODE = "1014";
+    public static String JOB_CATA_DESC = "职位类别不能为空";
+
+    public static String JOB_CITY_CODE = "1015";
+    public static String JOB_CITY_DESC = "工作城市不能为空";
+
+    public static String JOB_DEPT_CODE = "1016";
+    public static String JOB_DEPT_DESC = "工作部门不能为空";
+
+    public static String JOB_DESC_CODE = "1017";
+    public static String JOB_DESC_DESC = "工作描述不能为空";
+
+    public static String JOB_EDU_CODE = "1018";
+    public static String JOB_EDU_DESC = "工作描述不能为空";
+
+    public static String JOB_EXP_CODE = "1019";
+    public static String JOB_EXP_DESC = "工作经验不能为空";
+
+    public static String JOB_NAME_CODE = "1020";
+    public static String JOB_Name_DESC = "工作名称不能为空";
+
+    public static String JOB_NAT_CODE = "1021";
+    public static String JOB_NAT_DESC = "工作工作性质不能为空";
+
+    public static String JOB_S_MIN_CODE = "1022";
+    public static String JOB_S_MIN_DESC = "工作最低薪资不能为空";
+
+    public static String JOB_S_MAX_CODE = "1023";
+    public static String JOB_S_MAX_DESC = "工作最高薪资不能为空";
 
 }

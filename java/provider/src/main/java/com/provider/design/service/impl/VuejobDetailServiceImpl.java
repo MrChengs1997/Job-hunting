@@ -25,7 +25,7 @@ public class VuejobDetailServiceImpl implements VuejobDetailService {
     }
 
     @Override
-    public List<JobDetailDto> getJobDetailList(String userId) {
+    public List<JobDetailDto> getJobDetailList(Integer userId) {
         return vuejobDetailMapper.getJobDetailList(userId);
     }
 }

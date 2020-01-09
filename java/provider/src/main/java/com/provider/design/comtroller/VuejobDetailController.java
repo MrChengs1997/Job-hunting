@@ -4,9 +4,7 @@ import com.provider.design.service.VuejobDetailService;
 import core.design.pojo.job.JobDetailDto;
 import core.design.util.StatusCode;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
@@ -40,10 +38,19 @@ public class VuejobDetailController {
         return  RES_CODE;
     }
 
+
+    //返回所有数据的接口
+    @GetMapping("/vuegetjobDetail/{userId}")
+    public List<JobDetailDto> getJobDetailByUserId(@PathVariable("userId")Integer userId){
+        List<JobDetailDto> allJobDetailByUserId = getAllJobDetailByUserId(userId);
+        return allJobDetailByUserId;
+    }
+
+
     //查询指定用户下的所有数据
     //在线的  exist ==1
     //下线的  exist ==0
-    public List<JobDetailDto> getAllJobDetailByUserId(String userId){
+    public List<JobDetailDto> getAllJobDetailByUserId(Integer userId){
         List<JobDetailDto> jobDetailList = null;
         try {
             jobDetailList= vuejobDetailService.getJobDetailList(userId);

@@ -19,7 +19,7 @@ public interface VuejobDetailMapper {
     public Integer addJobDetail(JobDetailDto jobDetailDto);
 
     //查询所有数据
-    public List<JobDetailDto> getJobDetailList(String userId);
+    public List<JobDetailDto> getJobDetailList(Integer userId);
 
 
 }

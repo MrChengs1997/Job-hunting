@@ -1,6 +1,7 @@
 package com.consumer.design.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import core.design.exception.ParameterException;
 import core.design.exception.UtilParmeter;
 import core.design.pojo.company.CompanyDetailDto;
@@ -18,6 +19,8 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import javax.validation.Valid;
 import java.net.URI;
+import java.util.ArrayList;
+import java.util.List;
 
 /*
  *  MrChengs
@@ -74,6 +77,31 @@ public class VuejobDetailController {
         }
         return RES_CODE;
     }
+
+    //查询Jbob表
+    //
+//    @GetMapping("/vuegetjobdetail/{userId}/{code}")
+//    List<JobDetailDto> getJobDetailByUserId(@PathVariable("userId")String userId,
+//                                            @PathVariable("code")String code){
+
+    @GetMapping("/vuegetjobdetail")
+    List<JobDetailDto> getJobDetailByUserId(String userId, String code){
+        List<JobDetailDto> jobDetailDtos = new ArrayList<>();
+        try {
+            //调用查询接口
+            String baseUrl = "http://PROVIDER/vuegetjobDetail/"+userId;
+            ResponseEntity<String>  JobMsg =
+                    restTemplate.getForEntity(baseUrl, String.class);
+            System.out.println(JobMsg.getBody());
+
+            jobDetailDtos = JSONArray.parseArray(JobMsg.getBody(),JobDetailDto.class);
+
+        }catch (Exception e){
+
+        }
+        return  jobDetailDtos;
+    }
+
 
     public  void checkJobParamer(JobDetailDto jobDetailDto){
         if (jobDetailDto.getJobAddress() ==null){

@@ -20,7 +20,7 @@
       <dl class="company_center_aside">
         <dt>我发布的职位</dt>
         <dd>
-          <a  @click="updateshowJobCode(4)">有效职位</a>
+          <a  @click="updateshowJobCode(4,0)">有效职位</a>
         </dd>
         <dd>
           <a  @click="updateshowJobCode(4,1)">已下线职位</a>
@@ -37,11 +37,8 @@
         <div class="f18 mb10">跟同行聊聊</div>
         <div class="f24">338167634</div>
       </div>            </div><!-- end .sidebar -->
-
     <!--内容区域-->
     <div class="content">
-<!--      //展示工区去页面（发布职位0，待处理简历1，已通知面试简历2，不合适简历3，有效职位4，下线5）-->
-
       <!--创建招聘职位页面-->
       <div v-show="showJobCode == 0">
                 <createjob/>
@@ -85,56 +82,36 @@
       return{
         showJobCode:'1',//展示工区去页面（发布职位0，待处理简历1，已通知面试简历2，不合适简历3，有效职位4，下线5）
         showdiffjobCode :1,//组件进行显示的另一个组件
+        jobDetails:[]
       }
     },
     methods:{
       updateshowJobCode(id,num){
-        this.showJobCode = id
+        this.showJobCode = id;
 
-        //已下线职位
-        if (id == 4){
-          this.showdiffjobCode = 1;
-          if (num ==1){//站位标识修改页面数据
-            this.showdiffjobCode = 0;
-          }
-        }
+        //有效职位&已下线职位的判断
+        if (this.showJobCode == 4){
 
-        //待处理&已通知面试
-        if (id == 1){
-          this.showdiffjobCode = 0;
-
-          const userId = strogUtil.readToken().userId
-          const  url = `http://localhost:8082/vueaddjob/${userId}/0`;
-
-          //有效职位
-          if (num ==1){//站位标识修改页面数据
-            //
+          if(num == 0){//有效职位页面
             this.showdiffjobCode = 1;
+            // const userId = strogUtil.readToken()
+            // const  url = `http://127.0.0.1:8082/vuegetjobdetail?userId='${userId}'&code='1'`;
+            // axios({
+            //   url:url,
+            //   method:'GET',
+            // }).then(response => {
+            //   const  code = response.data
+            //   console.log(code)
+            // })
 
-            const  url = `http://localhost:8082/vueaddjob/${userId}/1`;
-            axios({
-              url:url,
-              method:'GET',
-              data:param
-            }).then(response => {
-              const  code = response.data
-            })
-
+            return;
+          }else  if (num ==1){
+            this.showdiffjobCode = 0;
+            return;
           }
 
-
-          //查询已经下线的招聘数据
-          axios({
-            url:url,
-            method:'GET',
-            data:param
-          }).then(response => {
-            const  code = response.data
-          })
-
-
-
         }
+
 
       }
     },

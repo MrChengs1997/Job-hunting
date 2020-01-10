@@ -80,24 +80,29 @@ public class VuejobDetailController {
 
     //查询Jbob表
     //
-//    @GetMapping("/vuegetjobdetail/{userId}/{code}")
-//    List<JobDetailDto> getJobDetailByUserId(@PathVariable("userId")String userId,
-//                                            @PathVariable("code")String code){
-
-    @GetMapping("/vuegetjobdetail")
-    List<JobDetailDto> getJobDetailByUserId(String userId, String code){
+    @GetMapping("/vuegetjobdetail/{userId}/{code}")
+    List<JobDetailDto> getJobDetailByUserId(@PathVariable("userId")String userId,
+                                            @PathVariable("code")Integer code){
         List<JobDetailDto> jobDetailDtos = new ArrayList<>();
         try {
             //调用查询接口
             String baseUrl = "http://PROVIDER/vuegetjobDetail/"+userId;
             ResponseEntity<String>  JobMsg =
                     restTemplate.getForEntity(baseUrl, String.class);
-            System.out.println(JobMsg.getBody());
 
-            jobDetailDtos = JSONArray.parseArray(JobMsg.getBody(),JobDetailDto.class);
-
+            if (JobMsg.getBody() != null){
+                List<JobDetailDto> jobDetailDtos1 = JSONArray.parseArray(JobMsg.getBody(), JobDetailDto.class);
+                //code状态为1查询有效职位
+                //code状态为0查询下线职位
+                if (jobDetailDtos1.size() > 0&& jobDetailDtos1 != null){
+                    for (JobDetailDto jobDetailDto :jobDetailDtos1){
+                        if (jobDetailDto.getJobExist() ==code){
+                            jobDetailDtos.add(jobDetailDto);
+                        }
+                    }
+                }
+            }
         }catch (Exception e){
-
         }
         return  jobDetailDtos;
     }

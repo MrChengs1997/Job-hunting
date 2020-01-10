@@ -43,17 +43,14 @@
       <div v-show="showJobCode == 0">
                 <createjob/>
       </div>
-
       <!-- 待处理简历&已通知面试简历  1/2-->
       <div v-show="showJobCode == 1" >
          <handleResume :showdiffjobCode="showdiffjobCode"/>
       </div>
-
       <!--不合适简历-->
       <div v-show="showJobCode == 3">
         <refuseResume/>
       </div>
-
       <!--effectiveJob&下线职位  4/5-->
       <div v-show="showJobCode == 4">
         <effective-job  :showdiffjobCode="showdiffjobCode"/>
@@ -91,26 +88,62 @@
 
         //有效职位&已下线职位的判断
         if (this.showJobCode == 4){
-
+          const userId = strogUtil.readToken().userId
           if(num == 0){//有效职位页面
             this.showdiffjobCode = 1;
-            // const userId = strogUtil.readToken()
-            // const  url = `http://127.0.0.1:8082/vuegetjobdetail?userId='${userId}'&code='1'`;
-            // axios({
-            //   url:url,
-            //   method:'GET',
-            // }).then(response => {
-            //   const  code = response.data
-            //   console.log(code)
-            // })
+            const  url = `http://127.0.0.1:8082/vuegetjobdetail/${userId}/1`;
+            axios({
+              url:url,
+              method:'GET',
+            }).then(response => {
+              const  code = response.data
+              this.jobDetails = response.data
 
+              this.jobDetails.forEach(function (item,index) {
+
+                // //{"":1,"":"1","":5,"":2,"":"11111",
+                // // "":"1","":"11111","":"1","jobEduc":"社交","":"不限","
+                // // ":"11111","":"全职","":1,"":1,"":6,
+                // // "":"2020-01-09T19:56:28.000+0000","":null}
+                // console.log(item.jobId)
+                // console.log(item.jobComId)
+                // console.log(item.jobUserId)
+                // console.log(item.jobCity)
+                // console.log(item.jobCategory)
+                // console.log(item.jobExper)
+                // console.log(item.jobExist)
+                // console.log(item.jobDesc)
+                // console.log(item.jobDept)
+                // console.log(item.jobNature)
+                // console.log(item.jobSalaryMax)
+                // console.log(item.jobCreateDate)
+                // console.log(item.jobName)
+                // console.log(item.jobAddress)
+                // console.log(item.jobSalaryMin)
+                // console.log(item.jobEndDate)
+                // console.log(JSON.stringify(item) + "---" + index)
+              })
+
+              console.log(code)
+            })
             return;
-          }else  if (num ==1){
+          }else  if (num ==1){//下线职位页面
             this.showdiffjobCode = 0;
+            const  url = `http://127.0.0.1:8082/vuegetjobdetail/${userId}/0`;
+            axios({
+              url:url,
+              method:'GET',
+            }).then(response => {
+              const  code = response.data
+              console.log(code)
+            })
             return;
           }
 
         }
+
+
+        //待处理简历&已通知面试简历
 
 
       }

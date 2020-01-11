@@ -7,6 +7,7 @@ import core.design.exception.UtilParmeter;
 import core.design.pojo.company.CompanyDetailDto;
 import core.design.pojo.job.JobDetailDto;
 import core.design.pojo.user.UserDetailDto;
+import core.design.util.StatusCode;
 import core.design.util.URLUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -73,7 +74,6 @@ public class VuejobDetailController {
                }
            }
         }catch (Exception r){
-
         }
         return RES_CODE;
     }
@@ -83,6 +83,14 @@ public class VuejobDetailController {
     @GetMapping("/vuegetjobdetail/{userId}/{code}")
     List<JobDetailDto> getJobDetailByUserId(@PathVariable("userId")String userId,
                                             @PathVariable("code")Integer code){
+
+        if(userId == null){
+            throw new ParameterException(UtilParmeter.User_ID,UtilParmeter.User_ID_DESC);
+        }
+        if(code == null){
+            throw new ParameterException(UtilParmeter.CODE_CODE,UtilParmeter.CODE_DESC);
+        }
+
         List<JobDetailDto> jobDetailDtos = new ArrayList<>();
         try {
             //调用查询接口
@@ -105,6 +113,25 @@ public class VuejobDetailController {
         }catch (Exception e){
         }
         return  jobDetailDtos;
+    }
+
+
+    //根据jobID进行删除指定的JobDetail数据（实质是将状态为变为1）
+    //删除实质将数据字段变为3
+    @GetMapping("/vuedeletejobdetail/{JobId}/{code}")
+    public  Integer deleteIobDetailByJobId(@PathVariable("JobId")String JobId,@PathVariable("code")String code){
+
+        Integer RES_CODE = 0;
+        try {
+            Integer del_code =
+                    restTemplate.getForObject("http://PROVIDER/vuedeletejobdetail/" + JobId + "/" + code, Integer.class);
+            if (del_code == 1){
+                RES_CODE = 1;
+            }
+        }catch (Exception e){
+
+        }
+        return  RES_CODE;
     }
 
 

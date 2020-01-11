@@ -26,5 +26,10 @@
       ORDER BY JobCreateDate desc
   </select>
 
+    <update id="deleteJobDetailsByJobId">
+        UPDATE job_detail SET job_exist = #{code},job_end_date = now()
+        WHERE job_id =  #{jobId}
+    </update>
+
 
 </mapper>

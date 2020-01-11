@@ -28,4 +28,9 @@ public class VuejobDetailServiceImpl implements VuejobDetailService {
     public List<JobDetailDto> getJobDetailList(Integer userId) {
         return vuejobDetailMapper.getJobDetailList(userId);
     }
+
+    @Override
+    public Integer deleteJobDetailsByJobId(Integer jobId,Integer code) {
+        return vuejobDetailMapper.deleteJobDetailsByJobId(jobId,code);
+    }
 }

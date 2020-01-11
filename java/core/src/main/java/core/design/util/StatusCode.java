@@ -25,6 +25,10 @@ public class StatusCode {
     public  static  Integer JOB_SUCCESS = 1;//没有申请绑定公司->0
     public  static  Integer JOB_FAILD = 0;//申请绑定公司正在审批->1
 
+    //job数据下线
+    public  static  Integer JOB_OFF_SUCCESS = 1;//没有申请绑定公司->0
+    public  static  Integer JOB_OFF_FAILD = 0;//申请绑定公司正在审批->1
+
 
 
 

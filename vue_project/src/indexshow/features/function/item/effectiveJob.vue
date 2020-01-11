@@ -15,19 +15,21 @@
           <form id="searchForm">
             <input type="hidden" value="Publish" name="type">
             <ul class="reset my_jobs">
-              <li data-id="149594">
+              <li data-id="149594" v-for="(jobDetail,index) in jobDetails" :key="index"  >
                 <h3>
-                  <a target="_blank" title="随便写" href="http://www.lagou.com/jobs/149594.html">随便写</a>
-                  <span>[上海]</span>
+                  <a target="_blank"  href="http://www.lagou.com/jobs/149594.html">{{jobDetail.jobName}}</a>
+                  <span>[{{jobDetail.jobCity}}]</span>
                 </h3>
-                <span class="receivedResumeNo"><a href="unHandleResumes.html?positionId=149594">应聘简历（1）</a></span>
-                <div>兼职 / 1k-2k / 1-3年 / 硕士及以上</div>
-                <div class="c9">发布时间： 2014-07-01 17:07:01</div>
+                <span class="receivedResumeNo">应聘简历（{{index}}）</span>
+                <div>{{jobDetail.jobNature}} / {{jobDetail.jobSalaryMin}}k-{{jobDetail.jobSalaryMax}}k /  {{jobDetail.jobExper}} / {{jobDetail.jobEduc}}</div>
+                <div>部门： {{jobDetail.jobDept}}</div>
+                <div>工作地点： {{jobDetail.jobAddress}}</div>
+                <div>工作描述： {{jobDetail.jobDesc}}</div>
+                <div class="c9" v-if="showdiffjobCode ==1">发布时间： {{jobDetail.jobCreateDate}}</div>
+                <div class="c9" v-if="showdiffjobCode ==0">下线时间： {{jobDetail.jobEndDate}}</div>
                 <div class="links">
-                  <a class="job_refresh" href="javascript:void(0)">刷新<span>每个职位7天内只能刷新一次</span></a>
-                  <a target="_blank" class="job_edit" href="create.html?positionId=149594">编辑</a>
-                  <a class="job_offline" href="javascript:void(0)">下线</a>
-                  <a class="job_del" href="javascript:void(0)">删除</a>
+                  <a class="job_offline" @click="update(index,jobDetail.jobId)"  v-if="showdiffjobCode ==1">下线</a>
+                  <a class="job_del" @click="deleteJob(index,jobDetail.jobId)"   v-if="showdiffjobCode ==0">删除</a>
                 </div>
               </li>
             </ul>
@@ -38,9 +40,48 @@
 </template>
 
 <script>
+  import axios from 'axios'
   export default {
     props:{
-      showdiffjobCode:Number
+      showdiffjobCode:Number,
+      jobDetails:Array,
+      deleteJobDetails:Function
+    },
+    methods:{
+      update(index,jobId){
+        const  job_ID = jobId;
+        const  url = `http://localhost:8082/vuedeletejobdetail/${job_ID}/0`;
+        axios({
+          url:url,
+          method:'GET',
+        }).then(response => {
+          const  code = response.data
+          if (code == 1){
+            this.deleteJobDetails(index)
+            return
+          }
+          alert("下线招聘工作失败，请稍后重试！")
+        }).catch(error=>{
+
+        })
+      },
+      deleteJob(index,jobId){
+        const  job_ID = jobId;
+        const  url = `http://localhost:8082/vuedeletejobdetail/${job_ID}/3`;
+        axios({
+          url:url,
+          method:'GET',
+        }).then(response => {
+          const  code = response.data
+          if (code == 1){
+            this.deleteJobDetails(index)
+            return
+          }
+          alert("删除招聘工作失败，请稍后重试！")
+        }).catch(error=>{
+        })
+      }
+
     }
 
   }

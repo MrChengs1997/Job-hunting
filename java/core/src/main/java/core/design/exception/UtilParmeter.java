@@ -17,11 +17,16 @@ public class UtilParmeter {
     public static String  User_PAD = "1003";
     public static String  User_PAD_DESC = "输入密码不能为空";
 
+    public static String  User_ID = "1025";
+    public static String  User_ID_DESC = "输入用户id不能为空";
+
 //    //用户密码不能为空
 //    public static String  User_PAD = "1003";
 //    public static String  User_PAD_DESC = "输入密码不能为空";
 
     //company字段判断
+
+
     public static String COM_WHOLE_NAME_CODE = "1004";
     public static String COM_WHOLE_NAME_DESC = "公司全称不能为空";
 
@@ -82,5 +87,12 @@ public class UtilParmeter {
 
     public static String JOB_S_MAX_CODE = "1023";
     public static String JOB_S_MAX_DESC = "工作最高薪资不能为空";
+
+    public static String COM_ID_CODE = "1024";
+    public static String COM_ID_DESC = "公司ID不能为空";
+
+
+    public static String CODE_CODE = "1025";
+    public static String CODE_DESC = "标记为不能为null";
 
 }

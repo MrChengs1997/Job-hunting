@@ -19,6 +19,18 @@ public class UtilFeatures {
     public static String COM_ADD_CODE ="2004";
     public static String COM_ADD_DESC ="进行新增company数据出错";
 
+    //查询指定用户下的所有数据
+    public static String SEL_USER_JOB ="2005";
+    public static String SEL_USER_JOB_CODE ="查询指定用户下的所有数据";
+
+    //添加job
+    public static String ADD_JOB_CODE ="2006";
+    public static String ADD_JOB_DESC ="添加JOBDetail出错";
+
+    //根据jobID进行删除指定的JobDetail数据
+    public static String DEL_JOB_CODE ="2007";
+    public static String DEL_JOB_DESC ="job下线失败";
+
 
 
 

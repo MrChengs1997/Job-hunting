@@ -53,7 +53,7 @@
       </div>
       <!--effectiveJob&下线职位  4/5-->
       <div v-show="showJobCode == 4">
-        <effective-job  :showdiffjobCode="showdiffjobCode"/>
+        <effective-job :deleteJobDetails="deleteJobDetails" :jobDetails="jobDetails"  :showdiffjobCode="showdiffjobCode"/>
       </div>
     </div>
 
@@ -83,8 +83,16 @@
       }
     },
     methods:{
+
+      //删除jobDetails数组的数据（根据索引）
+      deleteJobDetails(index){
+        this.jobDetails.splice(index,1);
+      },
+      //点击事件触发之后进行跳转到指定的页面
       updateshowJobCode(id,num){
         this.showJobCode = id;
+
+        this.jobDetails = []
 
         //有效职位&已下线职位的判断
         if (this.showJobCode == 4){
@@ -135,7 +143,7 @@
               method:'GET',
             }).then(response => {
               const  code = response.data
-              console.log(code)
+              this.jobDetails = response.data
             })
             return;
           }

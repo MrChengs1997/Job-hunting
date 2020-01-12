@@ -92,7 +92,7 @@
                   <select id="select_education" class="select selectr_380" v-model="job_educ">
                     <option value="不限">不限</option>
                     <option value="大专">大专</option>
-                    <option value="社交">本科</option>
+                    <option value="本科">本科</option>
                     <option value="硕士">硕士</option>
                     <option value="博士">博士</option>
                   </select>

@@ -19,7 +19,9 @@
         <personList :obj_user="obj_user" :userMsg="userMsg" />
     </div>
 
+    <!--简历 -->
     <div v-if="showList ==4">
+      <resumeShow/>
     </div>
 
     <div v-if="showList ==6">
@@ -30,6 +32,7 @@
   </div>
 </template>
 <script>
+  import resume from './features/resume/resume'
   import IndexHeader from './IndexHeader'
   import IndexContainer from './IndexContainer'
   import IndexFooter from './IndexFooter'
@@ -38,6 +41,8 @@
   import personList from './features/personList'
   import companymsg from './features/companymsg'
   import companyAuth from './features/companyAuth'
+  import createResume from './features/resume/createResume'
+  import  resumeShow from  './features/resume/resumeShow'
   import  axios from  'axios'
   import PubSub from 'pubsub-js'
   import functionShow from './features/function/functionShow'
@@ -100,7 +105,6 @@
       this.obj_user =  strogUtil.readToken();
       console.log(this.obj_user.userEmail + "===")
 
-
       if (this.obj_user.userAttr ==1){
         this.isBoss = true;
         this.userMsg = "BOSS"
@@ -114,7 +118,7 @@
     },
     components :{
       IndexHeader,IndexContainer,IndexFooter,company,personList,companymsg,
-      companyAuth,functionShow
+      companyAuth,functionShow,resume,createResume,resumeShow
     }
   }
 </script>

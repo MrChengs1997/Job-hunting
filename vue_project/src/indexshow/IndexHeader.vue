@@ -24,7 +24,6 @@
 
 <script>
   import axios from 'axios'
-
   //PubSub库
   import PubSub from 'pubsub-js'
 

@@ -7,7 +7,7 @@
       <dl class="company_center_aside">
         <dt>我收到的简历</dt>
         <dd>
-          <a  @click="updateshowJobCode(1)">待处理简历</a>
+          <a  @click="updateshowJobCode(1,0)">待处理简历</a>
         </dd>
         <dd>
           <a  @click="updateshowJobCode(1,1)">已通知面试简历</a>
@@ -15,7 +15,6 @@
         <dd>
           <a  @click="updateshowJobCode(3)">不合适简历</a>
         </dd>
-
       </dl>
       <dl class="company_center_aside">
         <dt>我发布的职位</dt>
@@ -63,13 +62,10 @@
 <script>
   //创建招聘职位页面
   import createjob from './item/createjob'
-
   //待处理简历&已通知面试简历
   import handleResume from './item/handleResume'
-
   //不合适简历
   import refuseResume from './item/refuseResume'
-
   //有效职位&下线职位
   import effectiveJob from './item/effectiveJob'
   import strogUtil from '../../../util/strogUtil'
@@ -127,6 +123,19 @@
 
 
         //待处理简历&已通知面试简历
+        if (this.showJobCode ==1){
+          if (num == 0){//待处理简历
+            this.showdiffjobCode = 0;
+            return;
+          }
+
+          if (num ==1){
+            this.showdiffjobCode = 1;
+            return;
+          }
+
+        }
+
 
 
       }

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.provider.design.mapper.VueSerachJobMapper">
+
+    <select id="getNewJobDetail" resultType="core.design.pojo.job.JobDetailDto">
+      SELECT
+      job_id JobId,job_com_id JobComId,job_user_id JobUserId,job_category JobCategory,
+      job_name JobName,job_dept JobDept,job_nature JobNature,job_salary_min JobSalaryMin,
+      job_salary_max JobSalaryMax,job_city JobCity,job_exper JobExper,job_educ JobEduc,
+      job_desc JobDesc,job_exist JobExist,job_create_date JobCreateDate,
+      job_end_date JobEndDate,job_address JobAddress
+      from job_detail
+      where  job_exist = 1
+      ORDER BY JobCreateDate desc
+	  limit 15
+
+    </select>
+
+
+  <select id="getHotJobDetail" resultType="core.design.pojo.job.JobDetailDto">
+      SELECT
+      job_id JobId,job_com_id JobComId,job_user_id JobUserId,job_category JobCategory,
+      job_name JobName,job_dept JobDept,job_nature JobNature,job_salary_min JobSalaryMin,
+      job_salary_max JobSalaryMax,job_city JobCity,job_exper JobExper,job_educ JobEduc,
+      job_desc JobDesc,job_exist JobExist,job_create_date JobCreateDate,
+      job_end_date JobEndDate,job_address JobAddress
+      from job_detail
+      where  job_exist = 1
+      ORDER BY JobCreateDate
+	  limit 15
+
+    </select>
+
+
+    <select id="getJobByName" resultType="core.design.pojo.job.JobDetailDto">
+      SELECT
+      job_id JobId,job_com_id JobComId,job_user_id JobUserId,job_category JobCategory,
+      job_name JobName,job_dept JobDept,job_nature JobNature,job_salary_min JobSalaryMin,
+      job_salary_max JobSalaryMax,job_city JobCity,job_exper JobExper,job_educ JobEduc,
+      job_desc JobDesc,job_exist JobExist,job_create_date JobCreateDate,
+      job_end_date JobEndDate,job_address JobAddress
+      from job_detail
+      where  job_exist = 1
+      and (job_name LIKE  CONCAT(CONCAT('%', #{serachName}), '%') or job_category LIKE  CONCAT(CONCAT('%', #{serachName}), '%'))
+      ORDER BY JobCreateDate
+	  limit 15
+
+    </select>
+
+
+</mapper>

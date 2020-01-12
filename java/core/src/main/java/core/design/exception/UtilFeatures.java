@@ -31,7 +31,13 @@ public class UtilFeatures {
     public static String DEL_JOB_CODE ="2007";
     public static String DEL_JOB_DESC ="job下线失败";
 
+    //根查询最新job20条失败
+    public static String NEW_JOB_CODE ="2008";
+    public static String NEW_JOB_DESC ="查询最新的20条job失败";
 
+    //模糊查询job
+    public static String LIKE_JOB_CODE ="2009";
+    public static String LIKE_JOB_DESC ="根据serachname查询job失败";
 
 
 

@@ -95,4 +95,8 @@ public class UtilParmeter {
     public static String CODE_CODE = "1025";
     public static String CODE_DESC = "标记为不能为null";
 
+    //查询字段
+    public static String SER_CODE = "1026";
+    public static String SER_DESC = "模糊查询job字段不能位null";
+
 }

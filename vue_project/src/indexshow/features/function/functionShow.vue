@@ -53,7 +53,8 @@
       </div>
       <!--effectiveJob&下线职位  4/5-->
       <div v-show="showJobCode == 4">
-        <effective-job :deleteJobDetails="deleteJobDetails" :jobDetails="jobDetails"  :showdiffjobCode="showdiffjobCode"/>
+        <effective-job :deleteJobDetails="deleteJobDetails"
+                       :jobDetails="jobDetails"  :showdiffjobCode="showdiffjobCode"/>
       </div>
     </div>
 
@@ -79,11 +80,11 @@
       return{
         showJobCode:'1',//展示工区去页面（发布职位0，待处理简历1，已通知面试简历2，不合适简历3，有效职位4，下线5）
         showdiffjobCode :1,//组件进行显示的另一个组件
-        jobDetails:[]
+        jobDetails:[],
+
       }
     },
     methods:{
-
       //删除jobDetails数组的数据（根据索引）
       deleteJobDetails(index){
         this.jobDetails.splice(index,1);
@@ -106,33 +107,8 @@
             }).then(response => {
               const  code = response.data
               this.jobDetails = response.data
-
               this.jobDetails.forEach(function (item,index) {
-
-                // //{"":1,"":"1","":5,"":2,"":"11111",
-                // // "":"1","":"11111","":"1","jobEduc":"社交","":"不限","
-                // // ":"11111","":"全职","":1,"":1,"":6,
-                // // "":"2020-01-09T19:56:28.000+0000","":null}
-                // console.log(item.jobId)
-                // console.log(item.jobComId)
-                // console.log(item.jobUserId)
-                // console.log(item.jobCity)
-                // console.log(item.jobCategory)
-                // console.log(item.jobExper)
-                // console.log(item.jobExist)
-                // console.log(item.jobDesc)
-                // console.log(item.jobDept)
-                // console.log(item.jobNature)
-                // console.log(item.jobSalaryMax)
-                // console.log(item.jobCreateDate)
-                // console.log(item.jobName)
-                // console.log(item.jobAddress)
-                // console.log(item.jobSalaryMin)
-                // console.log(item.jobEndDate)
-                // console.log(JSON.stringify(item) + "---" + index)
               })
-
-              console.log(code)
             })
             return;
           }else  if (num ==1){//下线职位页面
@@ -147,7 +123,6 @@
             })
             return;
           }
-
         }
 
 
@@ -158,8 +133,7 @@
     },
     components :{
       createjob,handleResume,refuseResume,effectiveJob
-    }
-
+    },
   }
 </script>
 

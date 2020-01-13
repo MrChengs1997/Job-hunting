@@ -26,6 +26,7 @@
   import axios from 'axios'
   //PubSub库
   import PubSub from 'pubsub-js'
+  import strogUtil from '../util/strogUtil'
 
   export default {
     props:{
@@ -46,6 +47,11 @@
         type:Function,
         required : true
       },
+      resumeCode:Number,//简历状态数据  0无简历  1有简历
+      updateresumeCode:{//操作修改resumeCode的值
+        type:Function,
+        required : true
+      }
     },
     data () {
       return {
@@ -58,6 +64,30 @@
       //用于显示主菜单之后的container
       // （首页1,公司2，个人中心3，简历4，发布职位5，功能6）
       updateShowListItem(num){
+
+        if (num == 4 ){//简历界面的判断
+          alert("start")
+          const userId= strogUtil.readToken().userId
+          const  url = `http://localhost:8082/vuegetResumeCode/${userId}`;
+          axios({
+            url:url,
+            method:'GET'
+          }).then(response => {
+            const  code = response.data
+            console.log(code)
+            if(code ==1){
+              this.updateresumeCode(code)
+            }
+            if (code ==0){
+              this.updateresumeCode(code)
+            }
+          }).catch(error=>{
+
+          })
+        }
+
+
+
         this.updateShowList(num)
 
         //进行查询公司的状态

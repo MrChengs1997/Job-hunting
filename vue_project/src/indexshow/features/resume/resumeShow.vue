@@ -1,9 +1,16 @@
 <template>
   <div id="container">
     <div class="clearfix">
-
+<!--      <div v-if="resumeCode ==0">-->
+<!--        <createResume/>-->
+<!--      </div>-->
+<!--      <div v-if="resumeCode ==1">-->
+<!--        <resume/>-->
+<!--      </div>-->
+<!--      -->
 
       <createResume/>
+
 
       <div class="content_r">
         <div class="mycenterR" id="myInfo">
@@ -58,7 +65,9 @@
   import createResume from './createResume'
   import resume from  './resume'
     export default {
-
+    props:{
+      resumeCode:Number
+    },
     components:{
       createResume,resume
     }

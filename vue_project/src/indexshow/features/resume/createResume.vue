@@ -26,7 +26,7 @@
             <td width="25"><span class="redstar">*</span></td>
             <td width="85">学历：</td>
             <td>
-              <select  class="select selectr_380" v-model="job_educ">
+              <select  class="select selectr_380" >
                 <option value="无">无</option>
                 <option value="大专">大专</option>
                 <option value="本科">本科</option>
@@ -48,7 +48,7 @@
             <td width="25"><span class="redstar">*</span></td>
             <td width="85">工作年限：</td>
             <td>
-              <select  class="select selectr_380" v-model="job_exper">
+              <select  class="select selectr_380" >
                 <option value="应届毕业生">应届毕业生</option>
                 <option value="1年以下">1年以下</option>
                 <option value="1-3年">1-3年</option>

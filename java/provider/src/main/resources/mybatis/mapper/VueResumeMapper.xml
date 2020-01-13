@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.provider.design.mapper.VueResumeMapper">
+
+
+    <select id="getResumeDtoByUserId" resultType="core.design.pojo.resume.ResumeDto">
+            SELECT
+            res_id resumeId,res_user_id resumeUserId,res_name resumeName,
+            res_sex resumeSex,res_educ resumeEduc,res_expect_work resumeExpectWork,
+            res_work_exper resumeWorkExper,res_project_exper resumeProjectExper,
+            res_works_addr resumeWorksAddr,res_phone resumePhone,res_desc resumeDesc,
+            res_work_year resumeWorkYear  
+            from resume
+            where res_user_id = #{userId}
+    </select>
+
+
+
+
+</mapper>

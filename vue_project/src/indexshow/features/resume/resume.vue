@@ -1,5 +1,5 @@
 <template>
-  <div id="container">
+
       <div class="content_l">
         <div class="fl" id="resume_name">
           <div class="nameShow fl">
@@ -1264,7 +1264,7 @@
         </div><!--end #worksShow-->
         <input type="hidden" id="resumeId" value="268472">
       </div><!--end .content_l-->
-  </div>
+
 </template>
 <script>
     export default {}

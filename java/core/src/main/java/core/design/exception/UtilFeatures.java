@@ -39,6 +39,10 @@ public class UtilFeatures {
     public static String LIKE_JOB_CODE ="2009";
     public static String LIKE_JOB_DESC ="根据serachname查询job失败";
 
+    //根据用户id查询简历
+    public static String RES_BY_USERID_CODE ="2010";
+    public static String RES_BY_USERID_DESC ="根据用户id查询简历";
+
 
 
 }

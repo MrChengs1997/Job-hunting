@@ -3,7 +3,8 @@
   <div>
     <IndexHeader :obj_user="obj_user" :showCompany="showCompany"
                  :updateShowList="updateShowList" :updateShowCompany="updateShowCompany"  :isBoss="isBoss"  :userMsg="userMsg"
-                :company="company" :updateCompany="updateCompany"/>
+                :company="company" :updateCompany="updateCompany"
+       :resumeCode="resumeCode" :updateresumeCode="updateresumeCode"/>
 
     <div v-if="showList ==1">
       <IndexContainer/>
@@ -21,7 +22,7 @@
 
     <!--简历 -->
     <div v-if="showList ==4">
-      <resumeShow/>
+      <resumeShow :resumeCode="resumeCode"/>
     </div>
 
     <div v-if="showList ==6">
@@ -72,7 +73,8 @@
           'companyDevelopment':'',
           'companyProfile':'',
           'companyCeo':'',
-        }
+        },
+        resumeCode:0,//简历是否已经存在数据验证
       }
     },
     methods:{
@@ -97,6 +99,11 @@
         this.company.companyDevelopment = obj.companyDevelopment
         this.company.companyProfile = obj.companyProfile
         this.company.companyCeo = obj.companyCeo
+      },
+
+      //更新resumeCode
+      updateresumeCode(num){
+        this.resumeCode = num;
       }
 
 

@@ -11,11 +11,19 @@
             res_sex resumeSex,res_educ resumeEduc,res_expect_work resumeExpectWork,
             res_work_exper resumeWorkExper,res_project_exper resumeProjectExper,
             res_works_addr resumeWorksAddr,res_phone resumePhone,res_desc resumeDesc,
-            res_work_year resumeWorkYear  
+            res_work_year resumeWorkYear,res_create_date resumeCreateDate
             from resume
             where res_user_id = #{userId}
     </select>
 
+
+    <insert id="addResume" parameterType="core.design.pojo.resume.ResumeDto">
+        INSERT into
+        resume(res_user_id,res_name,res_sex,res_educ,res_expect_work,res_work_exper,
+        res_project_exper,res_works_addr,res_phone,res_desc,res_work_year,res_create_date)
+        VALUES(#{resumeUserId},#{resumeName},#{resumeSex},#{resumeEduc},#{resumeExpectWork},#{resumeWorkExper},
+        #{resumeProjectExper},#{resumeWorksAddr},#{resumePhone},#{resumeDesc},#{resumeWorkYear},#{resumeCreateDate})
+    </insert>
 
 
 

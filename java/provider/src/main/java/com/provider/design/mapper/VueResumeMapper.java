@@ -16,4 +16,7 @@ public interface VueResumeMapper {
 
     //根据用户id获取详细信息
     public ResumeDto getResumeDtoByUserId(@Param("userId")Integer userId);
+
+    //添加简历信息
+    public  Integer addResume(ResumeDto resumeDto);
 }

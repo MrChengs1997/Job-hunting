@@ -51,7 +51,12 @@
       updateresumeCode:{//操作修改resumeCode的值
         type:Function,
         required : true
+      },
+      updateResumeObj:{//查询结果为1时进行对结果的封装
+        type:Function,
+        required : true
       }
+
     },
     data () {
       return {
@@ -66,7 +71,6 @@
       updateShowListItem(num){
 
         if (num == 4 ){//简历界面的判断
-          alert("start")
           const userId= strogUtil.readToken().userId
           const  url = `http://localhost:8082/vuegetResumeCode/${userId}`;
           axios({
@@ -75,19 +79,27 @@
           }).then(response => {
             const  code = response.data
             console.log(code)
-            if(code ==1){
-              this.updateresumeCode(code)
+            if(code ==1){//查询存在简历
+              this.updateresumeCode(code)//更新显示字段
+                      //需要进行查询简历数据
+                      axios({
+                        url:`http://localhost:8082/vuegetResumeDetail/${userId}`,
+                        method:'GET'
+                       }).then(response => {
+                        const  codeObj = response.data
+                        this.updateResumeObj(codeObj)
+                      }).catch(error=>{
+                      })
             }
-            if (code ==0){
-              this.updateresumeCode(code)
+            if (code ==0){//查询不存在简历
+              this.updateresumeCode(code)//更新显示字段
             }
           }).catch(error=>{
 
           })
         }
 
-
-
+        //调到指定的数据页面
         this.updateShowList(num)
 
         //进行查询公司的状态

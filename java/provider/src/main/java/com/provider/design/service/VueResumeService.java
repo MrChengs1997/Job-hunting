@@ -6,4 +6,6 @@ public interface VueResumeService {
 
     //根据用户id获取详细信息
     public ResumeDto getResumeDtoByUserId(Integer userId);
+
+    public  Integer addResume(ResumeDto resumeDto);
 }

@@ -43,6 +43,10 @@ public class UtilFeatures {
     public static String RES_BY_USERID_CODE ="2010";
     public static String RES_BY_USERID_DESC ="根据用户id查询简历";
 
+    //添加ruesume
+    public static String ADD_RESUME_CODE ="2011";
+    public static String ADD_RESUME_DESC ="添加简历接口有误";
+
 
 
 }

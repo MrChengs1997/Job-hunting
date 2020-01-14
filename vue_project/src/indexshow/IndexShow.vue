@@ -1,10 +1,10 @@
 <template>
-
   <div>
     <IndexHeader :obj_user="obj_user" :showCompany="showCompany"
                  :updateShowList="updateShowList" :updateShowCompany="updateShowCompany"  :isBoss="isBoss"  :userMsg="userMsg"
                 :company="company" :updateCompany="updateCompany"
-       :resumeCode="resumeCode" :updateresumeCode="updateresumeCode"/>
+       :resumeCode="resumeCode" :updateresumeCode="updateresumeCode"
+      :updateResumeObj="updateResumeObj"/>
 
     <div v-if="showList ==1">
       <IndexContainer/>
@@ -22,7 +22,8 @@
 
     <!--简历 -->
     <div v-if="showList ==4">
-      <resumeShow :resumeCode="resumeCode"/>
+      <resumeShow :resumeCode="resumeCode" :resumeObj="resumeObj" :updateResumeObj="updateResumeObj" :updateresumeCode="updateresumeCode"
+      />
     </div>
 
     <div v-if="showList ==6">
@@ -75,9 +76,16 @@
           'companyCeo':'',
         },
         resumeCode:0,//简历是否已经存在数据验证
+        resumeObj:{},//查询出的简历结果对象
       }
     },
     methods:{
+
+      //indexheader中进行查询出的结果进行修改resumeObj对象的值
+      updateResumeObj(obj){
+                this.resumeObj = obj
+      },
+
       //container功能区域数据显示方法
       updateShowList(num){
         this.showList = num

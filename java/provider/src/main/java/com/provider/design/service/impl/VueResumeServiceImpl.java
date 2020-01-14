@@ -15,4 +15,9 @@ public class VueResumeServiceImpl implements VueResumeService {
     public ResumeDto getResumeDtoByUserId(Integer userId) {
         return vueResumeMapper.getResumeDtoByUserId(userId);
     }
+
+    @Override
+    public Integer addResume(ResumeDto resumeDto) {
+        return vueResumeMapper.addResume(resumeDto);
+    }
 }

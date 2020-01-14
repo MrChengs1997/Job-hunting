@@ -2,6 +2,8 @@ package core.design.pojo.resume;
 
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 public class ResumeDto {
     private Integer resumeId;//简历id
@@ -16,5 +18,6 @@ public class ResumeDto {
     private String resumePhone;//联系方式
     private String resumeDesc;//自我描述
     private String resumeWorkYear;//工作年限
+    private Date resumeCreateDate;//创建时间
 
 }

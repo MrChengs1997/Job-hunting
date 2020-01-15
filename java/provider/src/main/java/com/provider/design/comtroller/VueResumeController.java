@@ -20,9 +20,28 @@ public class VueResumeController {
     @Autowired
     VueResumeService vueResumeService;
 
+
+    //添加resume数据信息
+    @PostMapping("/vueupResume")
+    public Integer addjobDetail(@RequestBody ResumeDto resumeDto){
+        Integer ResultCode = 0;
+        try {
+            Integer addCode = vueResumeService.upResume(resumeDto);
+            if (addCode ==1){
+                ResultCode =1;
+            }
+        }catch (Exception e){
+            throw new ParameterException(UtilFeatures.ADD_RESUME_CODE,UtilFeatures.ADD_RESUME_DESC);
+        }
+        return ResultCode;
+
+    }
+
+
+
     //添加resume数据信息
     @PostMapping("/vueaddResume")
-    public Integer addjobDetail(@RequestBody ResumeDto resumeDto){
+    public Integer addResume(@RequestBody ResumeDto resumeDto){
         Integer ResultCode = 0;
         try {
             Integer addCode = vueResumeService.addResume(resumeDto);

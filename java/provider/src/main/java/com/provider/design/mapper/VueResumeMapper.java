@@ -19,4 +19,7 @@ public interface VueResumeMapper {
 
     //添加简历信息
     public  Integer addResume(ResumeDto resumeDto);
+
+    //更新简历信息
+    public Integer upResume(ResumeDto resumeDto);
 }

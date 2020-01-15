@@ -23,11 +23,32 @@ public class VueResumeController {
     @Autowired
     RestTemplate restTemplate;
 
+    //修改简历信息
+    @PostMapping(value = "/vueupResume/{UserId}",produces = {MediaType.APPLICATION_ATOM_XML_VALUE, MediaType.APPLICATION_JSON_VALUE})
+    public  Integer upResume(ResumeDto resumeDto, @PathVariable("UserId")Integer UserId){
+
+        Integer ResultCode = 0;
+
+        resumeDto.setResumeUserId(UserId);
+
+        try {
+            ResponseEntity<Integer> addResumneBody =
+                    restTemplate.postForEntity("http://PROVIDER/vueupResume", resumeDto, Integer.class);
+            int a =0;
+            if (addResumneBody.getBody() == 1){
+                ResultCode =1;
+            }
+        }catch (Exception e){
+        }
+        return  ResultCode;
+    }
+
+
 
     //根据用户id进行添加简历数据
     //添加job表信息
     @PostMapping(value = "/vueaddResume/{UserId}",produces = {MediaType.APPLICATION_ATOM_XML_VALUE, MediaType.APPLICATION_JSON_VALUE})
-    public  Integer addJob(ResumeDto resumeDto, @PathVariable("UserId")Integer UserId){
+    public  Integer addResume(ResumeDto resumeDto, @PathVariable("UserId")Integer UserId){
         Integer ResultCode = 0;
         resumeDto.setResumeUserId(UserId);
         resumeDto.setResumeCreateDate(new Date());

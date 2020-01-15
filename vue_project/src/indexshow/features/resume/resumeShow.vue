@@ -3,19 +3,27 @@
     <div class="clearfix">
       <div v-if="resumeCode ==0">
           <createResume :updateResumeObj="updateResumeObj" :updateresumeCode="updateresumeCode"/>
-        <resumeRight/>
+        <resumeRight />
       </div>
 
       <div v-if="resumeCode ==1">
-        <resume :resumeObj="resumeObj"/>
-        <resumeRight/>
+        <resume :resumeObj="resumeObj" :updateresumeCode="updateresumeCode"/>
+        <resumeRight />
       </div>
+
+      <div v-if="resumeCode ==3">
+        <updateResume :resumeObj="resumeObj" :updateresumeCode="updateresumeCode"/>
+        <resumeRight />
+      </div>
+
+
     </div>
     <div id="clearfix"></div>
     </div>
 </template>
 
 <script>
+  import updateResume from './updateResume'
   import createResume from './createResume'
   import resume from  './resume'
   import resumeRight from './resumeRight'
@@ -34,7 +42,7 @@
       resumeObj:Object,//简历查询之后的对象
     },
     components:{
-      createResume,resume,resumeRight
+      createResume,resume,resumeRight,updateResume
     }
 
     }

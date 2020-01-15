@@ -25,6 +25,22 @@
         #{resumeProjectExper},#{resumeWorksAddr},#{resumePhone},#{resumeDesc},#{resumeWorkYear},#{resumeCreateDate})
     </insert>
 
+    <update id="upResume" parameterType="core.design.pojo.resume.ResumeDto">
+        UPDATE resume SET
+        res_name =#{resumeName},
+        res_sex=#{resumeSex},
+        res_educ=#{resumeEduc},
+        res_expect_work=#{resumeExpectWork},
+        res_work_exper=#{resumeWorkExper},
+        res_project_exper=#{resumeProjectExper},
+        res_works_addr=#{resumeWorksAddr},
+        res_phone=#{resumePhone},
+        res_desc=#{resumeDesc},
+        res_work_year=#{resumeWorkYear},
+        res_create_date = now()
+        WHERE res_user_id = #{resumeUserId}
+    </update>
+
 
 
 </mapper>

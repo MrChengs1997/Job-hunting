@@ -20,4 +20,9 @@ public class VueResumeServiceImpl implements VueResumeService {
     public Integer addResume(ResumeDto resumeDto) {
         return vueResumeMapper.addResume(resumeDto);
     }
+
+    @Override
+    public Integer upResume(ResumeDto resumeDto) {
+        return vueResumeMapper.upResume(resumeDto);
+    }
 }

@@ -17,7 +17,7 @@
     </div><!--end #myResume-->
 
     <div class="mycenterR" id="resumeSet">
-      <h2>投递简历设置  <span>修改设置</span></h2>
+      <h2>投递简历设置  <span><a>修改设置</a></span></h2>
       <!-- -1 (0=附件， 1=在线， 其他=未设置) -->
       <div class="noSet set0 dn">默认使用<span>附件简历</span>进行投递</div>
       <div class="noSet set1 dn">默认使用<span>在线简历</span>进行投递</div>
@@ -32,13 +32,10 @@
         <a class="btn_profile_cancel" href="javascript:;">取 消</a>
       </form>
     </div><!--end #resumeSet-->
-
     <div class="mycenterR" id="myShare">
       <h2>当前每日投递量：10个</h2>
       <a target="_blank" href="h/share/invite.html">邀请好友，提升投递量</a>
     </div><!--end #myShare-->
-
-
     <div class="greybg qrcode mt20">
       <img width="242" height="242" alt="拉勾微信公众号二维码" src="../../../style/images/qr_resume.png">
       <span class="c7">微信扫一扫，轻松找工作</span>
@@ -48,7 +45,7 @@
 
 <script>
   export default {
-    name: 'resumeLeft'
+
   }
 </script>
 

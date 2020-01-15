@@ -3,7 +3,7 @@
       <div class="content_l">
         <div class="fl" id="resume_name">
           <div class="nameShow fl">
-            <h1 title="jason的简历">{{resumeObj.resumeName}} 的简历</h1>
+            <h1 title="jason的简历">{{resumeObj.resumeName}} 的简历    <a @click="upResume">修改简历</a></h1>
           </div>
           <form class="fl dn" id="resumeNameForm">
             <input type="text" value="jason的简历" name="resumeName" class="nameEdit c9">
@@ -116,7 +116,16 @@
 <script>
     export default {
       props:{
-        resumeObj:Object
+        resumeObj:Object,
+        updateresumeCode:{
+          type:Function,
+          required : true
+        },
+      },
+      methods:{
+        upResume(){
+          this.updateresumeCode(3)
+        }
       }
 
 

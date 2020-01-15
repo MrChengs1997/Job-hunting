@@ -8,4 +8,7 @@ public interface VueResumeService {
     public ResumeDto getResumeDtoByUserId(Integer userId);
 
     public  Integer addResume(ResumeDto resumeDto);
+
+    //更新简历信息
+    public Integer upResume(ResumeDto resumeDto);
 }

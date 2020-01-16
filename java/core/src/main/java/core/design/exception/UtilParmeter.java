@@ -99,4 +99,9 @@ public class UtilParmeter {
     public static String SER_CODE = "1026";
     public static String SER_DESC = "模糊查询job字段不能位null";
 
+
+    //进行简历的投递
+    public static String DEL_CODE = "1027";
+    public static String DEL_DESC = "投递简历失败";
+
 }

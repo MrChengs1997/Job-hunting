@@ -34,7 +34,6 @@ public class VueResumeController {
         try {
             ResponseEntity<Integer> addResumneBody =
                     restTemplate.postForEntity("http://PROVIDER/vueupResume", resumeDto, Integer.class);
-            int a =0;
             if (addResumneBody.getBody() == 1){
                 ResultCode =1;
             }
@@ -54,7 +53,6 @@ public class VueResumeController {
         resumeDto.setResumeCreateDate(new Date());
         try {
             ResponseEntity<Integer> addResumneBody = restTemplate.postForEntity("http://PROVIDER/vueaddResume", resumeDto, Integer.class);
-           int a =0;
             if (addResumneBody.getBody() == 1){
                 ResultCode =1;
             }

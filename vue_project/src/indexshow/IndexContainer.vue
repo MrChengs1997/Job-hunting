@@ -48,6 +48,7 @@
             <div>工作地点： {{serachJobDetail.jobAddress}}</div>
             <div>工作描述： {{serachJobDetail.jobDesc}}</div>
             <div class="c9" >发布时间： {{serachJobDetail.jobCreateDate}}</div>
+            <div style="text-align:center" class="btn_sended" ><a @click.prevent="delivery(serachJobDetail.jobId)">投递</a></div>
             <div class="links">
             </div>
           </li>
@@ -62,6 +63,7 @@
   import leftcontainer from './container/leftcontainer'
   import linkItem from  './container/linkItem'
   import axios from 'axios'
+  import strogUtil from '../util/strogUtil'
   export default {
     data(){
       return{
@@ -109,6 +111,44 @@
           this.serachJobDetails = code
           console.log(this.serachJobDetails)
         })
+      },
+      //投简历按钮
+      delivery(job_id){//job_id:获取job表的id
+        alert(job_id)
+        const  userId = strogUtil.readToken().userId
+        const jobId = job_id
+        const  url = `http://127.0.0.1:8082/vueISdelivery/${userId}/${jobId}`;
+
+        axios({
+          url:url,
+          method:'POST',
+        }).then(response => {
+         // 0：已经投递过的公司（）    1：表示没有投递过（）
+          const  code = response.data
+          if (code ==0){
+            alert("您已经投递过该公司的该职位！")
+            return;
+          }
+          if (code ==1){
+                      //进行投递岗位
+                      const  url1 = `http://127.0.0.1:8082/vuedelivery/${userId}/${jobId}`;
+                      axios({
+                        url:url1,
+                        method:'POST',
+                      }).then(response => {
+                        //0：已经投递过的公司（投递失败）    1：表示没有投递过（投递成功）
+                        const  code = response.data
+                        if (code ==1){
+                          alert("投递成功！")
+                        }
+                        return
+                      })
+          }
+          return
+        })
+
+
+
       }
 
     },

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.provider.design.mapper.VueDeliveryMapper">
+
+    <insert id="addDelivery" >
+        INSERT into delivery(job_id,user_id) VALUES(#{jobId},#{userId})
+    </insert>
+
+
+    <select id="isDelivery" resultType="int">
+        SELECT job_id from delivery where user_id = #{userId}
+    </select>
+
+
+</mapper>

@@ -48,5 +48,10 @@ public class UtilFeatures {
     public static String ADD_RESUME_DESC ="添加简历接口有误";
 
 
+    //查询未处理的简历
+    public static String SELECT_DEAL_CODE ="2012";
+    public static String SELECT_DEAL_DESC ="查询待处理简历列表出错";
+
+
 
 }

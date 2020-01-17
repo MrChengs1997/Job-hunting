@@ -5,7 +5,7 @@
 <mapper namespace="com.provider.design.mapper.VueDeliveryMapper">
 
     <insert id="addDelivery" >
-        INSERT into delivery(job_id,user_id) VALUES(#{jobId},#{userId})
+        INSERT into delivery(job_id,user_id,del_date) VALUES(#{jobId},#{userId},now())
     </insert>
 
 

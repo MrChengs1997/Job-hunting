@@ -126,19 +126,27 @@
         if (this.showJobCode ==1){
           if (num == 0){//待处理简历
             this.showdiffjobCode = 0;
+
+            //查询待处理的简历
+            const userId = strogUtil.readToken().userId
+            const  url = `http://127.0.0.1:8082/vuegetAllResumeBuBossId/${userId}`;
+            axios({
+              url:url,
+              method:'GET',
+            }).then(response => {
+              const  code = response.data
+              this.code = response.data
+
+            })
             return;
           }
 
-          if (num ==1){
+          if (num ==1){//已通知面试简历
             this.showdiffjobCode = 1;
             return;
           }
-
         }
-
-
-
-      }
+      },
     },
     components :{
       createjob,handleResume,refuseResume,effectiveJob

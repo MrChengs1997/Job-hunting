@@ -10,7 +10,7 @@
             res_id resumeId,res_user_id resumeUserId,res_name resumeName,
             res_sex resumeSex,res_educ resumeEduc,res_expect_work resumeExpectWork,
             res_work_exper resumeWorkExper,res_project_exper resumeProjectExper,
-            res_works_addr resumeWorksAddr,res_phone resumePhone,res_desc resumeDesc,
+             res_works_addr resumeWorksAddr,res_phone resumePhone,res_desc resumeDesc,
             res_work_year resumeWorkYear,res_create_date resumeCreateDate
             from resume
             where res_user_id = #{userId}

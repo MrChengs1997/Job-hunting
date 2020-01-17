@@ -114,7 +114,6 @@
       },
       //投简历按钮
       delivery(job_id){//job_id:获取job表的id
-        alert(job_id)
         const  userId = strogUtil.readToken().userId
         const jobId = job_id
         const  url = `http://127.0.0.1:8082/vueISdelivery/${userId}/${jobId}`;

@@ -44,7 +44,7 @@
       </div>
       <!-- 待处理简历&已通知面试简历  1/2-->
       <div v-show="showJobCode == 1" >
-         <handleResume :showdiffjobCode="showdiffjobCode"/>
+         <handleResume :resumeShowDeails="resumeShowDeails" :showdiffjobCode="showdiffjobCode"/>
       </div>
       <!--不合适简历-->
       <div v-show="showJobCode == 3">
@@ -76,7 +76,8 @@
       return{
         showJobCode:'1',//展示工区去页面（发布职位0，待处理简历1，已通知面试简历2，不合适简历3，有效职位4，下线5）
         showdiffjobCode :1,//组件进行显示的另一个组件
-        jobDetails:[],
+        jobDetails:[],//展示job
+        resumeShowDeails:[],//用于展示相关简历数据
 
       }
     },
@@ -126,18 +127,18 @@
         if (this.showJobCode ==1){
           if (num == 0){//待处理简历
             this.showdiffjobCode = 0;
+            this.resumeShowDeails = []//查询待处理简历
 
-            //查询待处理的简历
-            const userId = strogUtil.readToken().userId
-            const  url = `http://127.0.0.1:8082/vuegetAllResumeBuBossId/${userId}`;
-            axios({
-              url:url,
-              method:'GET',
-            }).then(response => {
-              const  code = response.data
-              this.code = response.data
+              //查询待处理的简历
+              const userId = strogUtil.readToken().userId
+              const  url = `http://127.0.0.1:8082/vuegetAllResumeBuBossId/${userId}`;
+              axios({
+                url:url,
+                method:'GET',
+              }).then(response => {
+                this.resumeShowDeails = response.data
 
-            })
+              })
             return;
           }
 

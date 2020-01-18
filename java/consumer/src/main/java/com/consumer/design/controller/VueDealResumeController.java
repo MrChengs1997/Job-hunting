@@ -36,7 +36,7 @@ public class VueDealResumeController {
             }
         }catch (Exception e){
         }
-        return null;
+        return resumeListDtos;
     }
 
 

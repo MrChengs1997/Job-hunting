@@ -10,7 +10,7 @@
 
 
     <select id="isDelivery" resultType="int">
-        SELECT job_id from delivery where user_id = #{userId}
+        SELECT job_id from delivery where user_id = #{userId} and del_code = 0
     </select>
 
 

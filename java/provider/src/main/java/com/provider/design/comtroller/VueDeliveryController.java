@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 /*
  *  MrChengs
  *  2020/1/16
@@ -45,10 +47,11 @@ public class VueDeliveryController {
     public Integer isdeliveryToBoss(@PathVariable("userId")Integer userId, @PathVariable("jobId")Integer jobId){
         Integer ResultCode = 1;
         try {
-            Integer job_id = vueDeliveryService.isDelivery(userId);
-            if (job_id !=null){
-                if (job_id == jobId){
-                    ResultCode = 0;
+            List<Integer> job_id = vueDeliveryService.isDelivery(userId);
+            if (job_id !=null && job_id.size()>0){
+                for (Integer jId:job_id)
+                if (jId == jobId){
+                    return  ResultCode = 0;
                 }
             }
         }catch (Exception e){

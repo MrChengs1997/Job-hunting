@@ -4,6 +4,8 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /*
  *MrChengs
  *进行投递简历
@@ -18,7 +20,7 @@ public interface VueDeliveryMapper {
     public Integer addDelivery(@Param("userId") Integer userId, @Param("jobId")Integer jobId);
 
     //查询是否已经投递过
-    public Integer isDelivery(@Param("userId") Integer userId);
+    public List<Integer> isDelivery(@Param("userId") Integer userId);
 
 
 

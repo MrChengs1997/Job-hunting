@@ -5,6 +5,8 @@ import com.provider.design.service.VueDeliveryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /*
  *MrChengs
  *进行投递简历
@@ -22,7 +24,7 @@ public class VueDeliveryServiceImpl implements VueDeliveryService {
     }
 
     @Override
-    public Integer isDelivery(Integer userId) {
+    public List<Integer> isDelivery(Integer userId) {
         return vueDeliveryMapper.isDelivery(userId);
     }
 }

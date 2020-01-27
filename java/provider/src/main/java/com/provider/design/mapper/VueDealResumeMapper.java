@@ -17,6 +17,14 @@ import java.util.List;
 public interface VueDealResumeMapper {
 
 
+    //查询未处理的简历投递列表
     public List<ResumeListDto> getAllResumeByBossId(@Param("userId") Integer userId);
+
+    //查询已经通知邀请面试的简历列表
+    public List<ResumeListDto> getAllSuccessResumeByBossId(@Param("userId") Integer userId);
+
+    //同意简历
+    public Integer qualifiedResume(@Param("userId")Integer userId,@Param("jobId")Integer jobId);
+
 
 }

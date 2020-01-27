@@ -1,8 +1,9 @@
 package com.consumer.design.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import core.design.exception.ParameterException;
+import core.design.exception.UtilParmeter;
 import core.design.pojo.ResumeListDto;
-import core.design.pojo.job.JobDetailDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,9 +26,11 @@ public class VueDealResumeController {
     RestTemplate restTemplate;
 
 
-    //查询为处理的简历列表
+    //查询未处理的简历列表
     @GetMapping("/vuegetAllResumeBuBossId/{userId}")
     public List<ResumeListDto> getAllResumeByBossUserId(@PathVariable("userId")Integer userId){
+        checkUserUd(userId);
+
         List<ResumeListDto> resumeListDtos = null;
         try {
             String ResumeListDtoJson = restTemplate.getForObject("http://PROVIDER/vuegetAllResumeBuBossId/" + userId, String.class);
@@ -37,6 +40,56 @@ public class VueDealResumeController {
         }catch (Exception e){
         }
         return resumeListDtos;
+    }
+
+    //处理合格简历进行修改数据
+    @GetMapping("/vuequalifiedResume/{userId}/{jobId}")
+    public Integer qualifiedResume(@PathVariable("userId")Integer userId,
+                                   @PathVariable("jobId")Integer jobId){//userId:投递用户id   jobId:投递工作的id
+        checkUserUd(userId);
+
+        if (jobId ==null ){
+            throw new ParameterException(UtilParmeter.JOB_ID_CODE,UtilParmeter.JOB_ID_DESC);
+        }
+        //返回状态码
+        //0：失败
+        //1:成功
+        Integer RES_CODE = 0;
+        try {
+            Integer res_code  =
+                    restTemplate.getForObject("http://PROVIDER/vuequalifiedResume/" + userId +"/" + jobId, Integer.class);
+
+            if (res_code != null){
+                RES_CODE = res_code;
+            }
+        }catch (Exception e){
+        }
+        return  RES_CODE;
+    }
+
+
+    //查询已通知面试的简历列表
+    @GetMapping("/vuegetAllSuccessResumeBuBossId/{userId}")
+    public List<ResumeListDto> getAllSuccsessResumeByBossUserId(@PathVariable("userId")Integer userId){
+        checkUserUd(userId);
+
+        List<ResumeListDto> resumeListDtos = null;
+        try {
+            String ResumeListDtoJson =
+                    restTemplate.getForObject("http://PROVIDER/vuegetAllSuccessResumeBuBossId/" + userId, String.class);
+            if (ResumeListDtoJson != null){
+                resumeListDtos= JSONObject.parseArray(ResumeListDtoJson, ResumeListDto.class);
+            }
+        }catch (Exception e){
+        }
+        return resumeListDtos;
+    }
+
+
+    public  void checkUserUd(Integer userId){
+        if (userId == null ){
+            throw new ParameterException(UtilParmeter.User_ID,UtilParmeter.User_ID_DESC);
+        }
     }
 
 

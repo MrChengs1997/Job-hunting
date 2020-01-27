@@ -53,12 +53,6 @@
       }
     },
     methods:{
-
-
-
-
-
-
       update(index,jobId){
         const  job_ID = jobId;
         const  url = `http://localhost:8082/vuedeletejobdetail/${job_ID}/0`;

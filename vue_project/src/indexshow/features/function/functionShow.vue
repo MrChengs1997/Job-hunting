@@ -1,7 +1,5 @@
 <template>
-
   <div id="container">
-
     <div class="sidebar">
       <a class="btn_create" @click="updateshowJobCode(0)">发布新职位</a>
       <dl class="company_center_aside">
@@ -35,7 +33,8 @@
         <div class="f14">加入互联网HR交流群</div>
         <div class="f18 mb10">跟同行聊聊</div>
         <div class="f24">338167634</div>
-      </div>            </div><!-- end .sidebar -->
+      </div>
+    </div><!-- end .sidebar -->
     <!--内容区域-->
     <div class="content">
       <!--创建招聘职位页面-->
@@ -44,7 +43,8 @@
       </div>
       <!-- 待处理简历&已通知面试简历  1/2-->
       <div v-show="showJobCode == 1" >
-         <handleResume :resumeShowDeails="resumeShowDeails" :showdiffjobCode="showdiffjobCode"/>
+         <handleResume :resumeShowDeails="resumeShowDeails" :showdiffjobCode="showdiffjobCode"
+                       />
       </div>
       <!--不合适简历-->
       <div v-show="showJobCode == 3">
@@ -89,9 +89,7 @@
       //点击事件触发之后进行跳转到指定的页面
       updateshowJobCode(id,num){
         this.showJobCode = id;
-
         this.jobDetails = []
-
         //有效职位&已下线职位的判断
         if (this.showJobCode == 4){
           const userId = strogUtil.readToken().userId
@@ -122,13 +120,11 @@
           }
         }
 
-
         //待处理简历&已通知面试简历
         if (this.showJobCode ==1){
           if (num == 0){//待处理简历
             this.showdiffjobCode = 0;
             this.resumeShowDeails = []//查询待处理简历
-
               //查询待处理的简历
               const userId = strogUtil.readToken().userId
               const  url = `http://127.0.0.1:8082/vuegetAllResumeBuBossId/${userId}`;
@@ -137,17 +133,34 @@
                 method:'GET',
               }).then(response => {
                 this.resumeShowDeails = response.data
-
               })
             return;
           }
 
           if (num ==1){//已通知面试简历
             this.showdiffjobCode = 1;
+            //查询已经通知面试的简历
+            this.resumeShowDeails =[]//置未null
+            //查询待处理的简历
+            const userId = strogUtil.readToken().userId
+            const  url = `http://127.0.0.1:8082/vuegetAllSuccessResumeBuBossId/${userId}`;
+            axios({
+              url:url,
+              method:'GET',
+            }).then(response => {
+              this.resumeShowDeails = response.data
+            })
             return;
           }
         }
+
+
       },
+
+      //更新简历处理的数据页面
+      updateResumeShowDeails(){
+
+      }
     },
     components :{
       createjob,handleResume,refuseResume,effectiveJob

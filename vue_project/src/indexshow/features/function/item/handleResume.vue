@@ -12,36 +12,42 @@
           </h1>
         </dt>
         <dd>
-          <form action="canInterviewResumes.html" method="get" id="filterForm">
+          <form  method="get" id="filterForm">
             <ul class="reset resumeLists">
-            <li data-id="1686182" class="onlineResume">
-              <label class="checkbox">
-                <input type="checkbox">
-                <i></i>
-              </label>
+            <li v-for="(resumeShowDeail,index) in resumeShowDeails " :key="index" data-id="1686182" class="onlineResume">
               <div class="resumeShow">
                 <ul class="reset my_jobs">
                   <li data-id="149594"  >
                     <h3>
-                      <a >name</a>
-                      <span>[{city}]</span>
+                      <a >{{resumeShowDeail.jobName}}</a>
+                      <span>[{{resumeShowDeail.jobCategory}}]</span>
                     </h3>
-                    <span class="receivedResumeNo">工作列表（index）</span>
-                    <div>部门： </div>
-                    <div>职位名称： </div>
-                    <div>工作类别： </div>
-                    <div>职位性质： </div>
-                    <div>薪资区间：</div>
-                    <div>工作经验：</div>
-                    <div>学历要求：</div>
-                    <div>工作地点： </div>
-                    <div>工作描述： </div>
-                    <div class="c9" >发布时间： </div>
-                    <div style="text-align:center" class="btn_sended" ><a>投递</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a>投递</a></div>
+                    <span class="receivedResumeNo">投递时间： {{resumeShowDeail.deliveryDate}}</span>
+                    <div>学历要求：{{resumeShowDeail.jobEduc}} </div>
+                    <div>工作性质：{{resumeShowDeail.jobNature}} </div>
+                    <div>薪资区间：{{resumeShowDeail.jobSalaryMin}}k - {{resumeShowDeail.jobSalaryMax}}k </div>
+                    <br>
+                    <h3>
+                      <span>简历信息</span>
+                    </h3>
+                    <div>简历姓名：{{resumeShowDeail.resumeName}} </div>
+                    <div>简历性别：{{resumeShowDeail.resumeSex}} </div>
+                    <div>联系方式：{{resumeShowDeail.resumePhone}} </div>
+                    <div>简历学历：{{resumeShowDeail.resumeEduc}} </div>
+                    <div>工作年限：{{resumeShowDeail.resumeWorkYear}} </div>
+                    <div>简历期望工作：{{resumeShowDeail.resumeExpectWork}} </div>
+                    <div>工作经历：{{resumeShowDeail.resumeWorkExper}} </div>
+                    <div>项目经验：{{resumeShowDeail.resumeProjectExper}} </div>
+                    <div>作品地址：{{resumeShowDeail.resumeWorksAddr}} </div>
+                    <div>自我描述：{{resumeShowDeail.resumeDesc}} </div>
+                    <div v-if="showdiffjobCode == 0" style="text-align:center" class="btn_sended" >
+                              <a @click="qualified(resumeShowDeail.resumeUserId,resumeShowDeail.jobId)">合格</a>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              <a >不合格</a></div>
+                    <div v-if="showdiffjobCode == 1" style="text-align:center" class="btn_sended" ><a>删除记录</a></div>
                     <div class="links">
                     </div>
                   </li>
-                  <a href="list.html" class="btn fr" target="_blank">查看更多</a>
                 </ul>
                 </div>
             </li>
@@ -51,14 +57,23 @@
       </dl>
     </div>
 </template>
-
 <script>
   export default {
     props:{
       showdiffjobCode:Number,
       resumeShowDeails:Array//查询简历详情
-    }
+    },
+    data(){
+      return {
+      }
+    },
+    methods:{
+      qualified(userId,jobId){//投递简历用户：userId   投递工作的id:jobId
+        console.log(userId + "--" + jobId)
+        console.log("-------")
+      }
 
+    }
   }
 </script>
 

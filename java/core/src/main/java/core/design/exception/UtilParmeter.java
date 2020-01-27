@@ -88,6 +88,9 @@ public class UtilParmeter {
     public static String JOB_S_MAX_CODE = "1023";
     public static String JOB_S_MAX_DESC = "工作最高薪资不能为空";
 
+    public static String JOB_ID_CODE = "1028";
+    public static String JOB_ID_DESC = "jobId不能为空";
+
     public static String COM_ID_CODE = "1024";
     public static String COM_ID_DESC = "公司ID不能为空";
 

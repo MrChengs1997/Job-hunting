@@ -18,4 +18,14 @@ public class VueDealResumeServiceImpl implements VueDealResumeService {
     public List<ResumeListDto> getAllResumeByBossId(Integer userId) {
         return vueDealResumeMapper.getAllResumeByBossId(userId);
     }
+
+    @Override
+    public List<ResumeListDto> getAllSuccessResumeByBossId(Integer userId) {
+        return vueDealResumeMapper.getAllSuccessResumeByBossId(userId);
+    }
+
+    @Override
+    public Integer qualifiedResume(Integer userId, Integer jobId) {
+        return vueDealResumeMapper.qualifiedResume(userId,jobId);
+    }
 }

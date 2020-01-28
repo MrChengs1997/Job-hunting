@@ -17,9 +17,12 @@ CREATE TABLE `company_detail` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 CREATE TABLE `delivery` (
-  `job_id` int(3) DEFAULT NULL,'job表的id'
-  `user_id` int(3) DEFAULT NULL '用户id'
+  `job_id` int(3) DEFAULT NULL,
+  `user_id` int(3) DEFAULT NULL,
+  `del_date` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `del_code` int(4) NOT NULL DEFAULT '0' COMMENT '0:代处理  1：通知面试  2：不合格' 3：删除记录
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 CREATE TABLE `job_detail` (
   `job_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键默认自增',

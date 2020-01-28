@@ -23,6 +23,24 @@
         GROUP BY delivery.del_date desc
     </select>
 
+    <select id="getAllNotResumeByBossId" resultType="core.design.pojo.ResumeListDto" parameterType="int">
+        SELECT DISTINCT
+        resume.res_id resumeId,resume.res_user_id resumeUserId,resume.res_name resumeName,
+        resume.res_sex resumeSex,resume.res_educ resumeEduc,resume.res_expect_work resumeExpectWork,
+        resume.res_work_exper resumeWorkExper,resume.res_project_exper resumeProjectExper,
+        resume.res_works_addr resumeWorksAddr,resume.res_phone resumePhone,resume.res_desc resumeDesc,
+        resume.res_work_year resumeWorkYear,resume.res_create_date resumeCreateDate,jobdetaile.job_id jobId,
+        jobdetaile.job_name jobName,jobdetaile.job_salary_min jobSalaryMin,jobdetaile.job_salary_max jobSalaryMax,
+        jobdetaile.job_category jobCategory,jobdetaile.job_educ jobEduc,jobdetaile.job_nature jobNature,
+        delivery.del_date deliveryDate
+        from resume resume,job_detail jobdetaile ,delivery delivery,user_detail userdetail
+        where resume.res_user_id = delivery.user_id
+        and  jobdetaile.job_id = delivery.job_id
+        AND delivery.del_code =2
+        and   jobdetaile.job_id in (SELECT jd.job_id from job_detail jd WHERE jd.job_user_id = #{userId})
+        GROUP BY delivery.del_date desc
+    </select>
+
 
 
     <select id="getAllSuccessResumeByBossId" resultType="core.design.pojo.ResumeListDto" parameterType="int">
@@ -46,6 +64,14 @@
 
     <update id="qualifiedResume">
         UPDATE delivery set del_code = 1 WHERE user_id = #{userId} and job_id = #{jobId}
+    </update>
+
+    <update id="disqualifiedResume">
+        UPDATE delivery set del_code = 2 WHERE user_id = #{userId} and job_id = #{jobId}
+    </update>
+
+    <update id="deleteResume">
+        UPDATE delivery set del_code = 3 WHERE user_id = #{userId} and job_id = #{jobId}
     </update>
 
 

@@ -44,11 +44,11 @@
       <!-- 待处理简历&已通知面试简历  1/2-->
       <div v-show="showJobCode == 1" >
          <handleResume :resumeShowDeails="resumeShowDeails" :showdiffjobCode="showdiffjobCode"
-                       />
+                      :updateResumeShowDeails="updateResumeShowDeails" />
       </div>
       <!--不合适简历-->
       <div v-show="showJobCode == 3">
-        <refuseResume/>
+        <refuseResume :resumeShowDeails="resumeShowDeails" :updateResumeShowDeails="updateResumeShowDeails"/>
       </div>
       <!--effectiveJob&下线职位  4/5-->
       <div v-show="showJobCode == 4">
@@ -102,8 +102,9 @@
             }).then(response => {
               const  code = response.data
               this.jobDetails = response.data
-              this.jobDetails.forEach(function (item,index) {
-              })
+
+              // this.jobDetails.forEach(function (item,index) {
+              // })
             })
             return;
           }else  if (num ==1){//下线职位页面
@@ -154,11 +155,28 @@
           }
         }
 
+        //不合适简历
+        if(this.showJobCode == 3){
+          this.resumeShowDeails = []//查询待处理简历
+          //查询待处理的简历
+          const userId = strogUtil.readToken().userId
+          const  url = `http://127.0.0.1:8082/vuegetAllNotResumeBuBossId/${userId}`;
+          axios({
+            url:url,
+            method:'GET',
+          }).then(response => {
+            this.resumeShowDeails = response.data
+            console.log(this.resumeShowDeails)
+          })
+          return;
+        }
+
 
       },
 
       //更新简历处理的数据页面
-      updateResumeShowDeails(){
+      updateResumeShowDeails(index){
+        this.resumeShowDeails.splice(index,1)
 
       }
     },

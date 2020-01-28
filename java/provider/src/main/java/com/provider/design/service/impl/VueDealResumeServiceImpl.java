@@ -28,4 +28,19 @@ public class VueDealResumeServiceImpl implements VueDealResumeService {
     public Integer qualifiedResume(Integer userId, Integer jobId) {
         return vueDealResumeMapper.qualifiedResume(userId,jobId);
     }
+
+    @Override
+    public Integer disqualifiedResume(Integer userId, Integer jobId) {
+        return vueDealResumeMapper.disqualifiedResume(userId,jobId);
+    }
+
+    @Override
+    public Integer deleteResume(Integer userId, Integer jobId) {
+        return vueDealResumeMapper.deleteResume(userId,jobId);
+    }
+
+    @Override
+    public List<ResumeListDto> getAllNotResumeByBossId(Integer userId) {
+        return vueDealResumeMapper.getAllNotResumeByBossId(userId);
+    }
 }

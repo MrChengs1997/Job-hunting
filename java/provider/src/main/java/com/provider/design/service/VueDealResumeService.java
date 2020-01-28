@@ -13,4 +13,9 @@ public interface VueDealResumeService {
 
     public Integer qualifiedResume(Integer userId,Integer jobId);
 
+    public Integer disqualifiedResume(Integer userId,Integer jobId);
+
+    public Integer deleteResume(Integer userId,Integer jobId);
+
+    public List<ResumeListDto> getAllNotResumeByBossId( Integer userId);
 }

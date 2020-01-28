@@ -30,7 +30,6 @@ public class VueDealResumeController {
     @GetMapping("/vuegetAllResumeBuBossId/{userId}")
     public List<ResumeListDto> getAllResumeByBossUserId(@PathVariable("userId")Integer userId){
         checkUserUd(userId);
-
         List<ResumeListDto> resumeListDtos = null;
         try {
             String ResumeListDtoJson = restTemplate.getForObject("http://PROVIDER/vuegetAllResumeBuBossId/" + userId, String.class);
@@ -47,7 +46,6 @@ public class VueDealResumeController {
     public Integer qualifiedResume(@PathVariable("userId")Integer userId,
                                    @PathVariable("jobId")Integer jobId){//userId:投递用户id   jobId:投递工作的id
         checkUserUd(userId);
-
         if (jobId ==null ){
             throw new ParameterException(UtilParmeter.JOB_ID_CODE,UtilParmeter.JOB_ID_DESC);
         }
@@ -58,7 +56,6 @@ public class VueDealResumeController {
         try {
             Integer res_code  =
                     restTemplate.getForObject("http://PROVIDER/vuequalifiedResume/" + userId +"/" + jobId, Integer.class);
-
             if (res_code != null){
                 RES_CODE = res_code;
             }
@@ -66,6 +63,70 @@ public class VueDealResumeController {
         }
         return  RES_CODE;
     }
+
+    //处理不合格简历进行修改数据
+    @GetMapping("/vuedisqualifiedResume/{userId}/{jobId}")
+    public Integer disqualifiedResume(@PathVariable("userId")Integer userId,
+                                   @PathVariable("jobId")Integer jobId){//userId:投递用户id   jobId:投递工作的id
+        checkUserUd(userId);
+        if (jobId ==null ){
+            throw new ParameterException(UtilParmeter.JOB_ID_CODE,UtilParmeter.JOB_ID_DESC);
+        }
+        //返回状态码
+        //0：失败
+        //1:成功
+        Integer RES_CODE = 0;
+        try {
+            Integer res_code  =
+                    restTemplate.getForObject("http://PROVIDER/vuedisqualifiedResume/" + userId +"/" + jobId, Integer.class);
+            if (res_code != null){
+                RES_CODE = res_code;
+            }
+        }catch (Exception e){
+        }
+        return  RES_CODE;
+    }
+
+
+    //删除已经合格的简历记录
+    @GetMapping("/vuedeleteResume/{userId}/{jobId}")
+    public Integer deleteResume(@PathVariable("userId")Integer userId,
+                                      @PathVariable("jobId")Integer jobId){//userId:投递用户id   jobId:投递工作的id
+        checkUserUd(userId);
+        if (jobId ==null ){
+            throw new ParameterException(UtilParmeter.JOB_ID_CODE,UtilParmeter.JOB_ID_DESC);
+        }
+        //返回状态码
+        //0：失败
+        //1:成功
+        Integer RES_CODE = 0;
+        try {
+            Integer res_code  =
+                    restTemplate.getForObject("http://PROVIDER/vuedeleteResume/" + userId +"/" + jobId, Integer.class);
+            if (res_code != null){
+                RES_CODE = res_code;
+            }
+        }catch (Exception e){
+        }
+        return  RES_CODE;
+    }
+
+    //查询不合格简历
+    @GetMapping("/vuegetAllNotResumeBuBossId/{userId}")
+    public List<ResumeListDto> getAllNotResumeByBossUserId(@PathVariable("userId")Integer userId){
+        checkUserUd(userId);
+        List<ResumeListDto> resumeListDtos = null;
+        try {
+            String ResumeListDtoJson = restTemplate.getForObject("http://PROVIDER/vuegetAllNotResumeBuBossId/" + userId, String.class);
+            if (ResumeListDtoJson != null){
+                resumeListDtos= JSONObject.parseArray(ResumeListDtoJson, ResumeListDto.class);
+            }
+        }catch (Exception e){
+        }
+        return resumeListDtos;
+    }
+
+
 
 
     //查询已通知面试的简历列表

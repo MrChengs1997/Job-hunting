@@ -4,17 +4,11 @@
     <list default="true" id="6e702318-1de6-40f8-95cb-2bada6a0666e" name="Default Changelist" comment="core">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consumer/src/main/java/com/consumer/design/controller/VueDealResumeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/src/main/java/com/consumer/design/controller/VueDealResumeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/core/design/exception/UtilParmeter.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/core/design/exception/UtilParmeter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/core/design/pojo/ResumeListDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/core/design/pojo/ResumeListDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/provider/design/comtroller/VueDealResumeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/provider/design/comtroller/VueDealResumeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/provider/design/mapper/VueDealResumeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/provider/design/mapper/VueDealResumeMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/provider/design/service/VueDealResumeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/provider/design/service/VueDealResumeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/provider/design/service/impl/VueDealResumeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/provider/design/service/impl/VueDealResumeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/provider/src/main/resources/mybatis/mapper/VueDealResumeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/resources/mybatis/mapper/VueDealResumeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue_project/src/indexshow/IndexHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vue_project/src/indexshow/IndexHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue_project/src/indexshow/features/function/functionShow.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vue_project/src/indexshow/features/function/functionShow.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue_project/src/indexshow/features/function/item/effectiveJob.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vue_project/src/indexshow/features/function/item/effectiveJob.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue_project/src/indexshow/features/function/item/handleResume.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vue_project/src/indexshow/features/function/item/handleResume.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/core/target/" />
     <ignored path="$PROJECT_DIR$/erueka/target/" />
@@ -30,40 +24,41 @@
     <session id="746664120">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.276" value="1" />
           <entry key="project.open.time.61" value="1" />
           <entry key="project.open.time.77" value="1" />
+          <entry key="project.open.time.79" value="1" />
           <entry key="project.open.time.98" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="4" />
-          <entry key="java" value="24" />
+          <entry key="java" value="34" />
           <entry key="properties" value="3" />
-          <entry key="xml" value="5" />
+          <entry key="xml" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="4" />
-          <entry key="JAVA" value="24" />
+          <entry key="JAVA" value="34" />
           <entry key="Properties" value="3" />
-          <entry key="XML" value="5" />
+          <entry key="XML" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="714" />
-          <entry key="xml" value="51" />
+          <entry key="java" value="925" />
+          <entry key="xml" value="63" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="714" />
-          <entry key="XML" value="51" />
+          <entry key="JAVA" value="925" />
+          <entry key="XML" value="63" />
         </counts>
       </usages-collector>
     </session>
@@ -73,8 +68,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/consumer/src/main/java/com/consumer/design/controller/VueDealResumeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+            <state relative-caret-position="-90">
+              <caret line="116" selection-start-line="116" selection-end-line="116" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,8 +80,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/comtroller/VueDealResumeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            <state relative-caret-position="-9">
+              <caret line="109" column="6" selection-start-line="109" selection-start-column="6" selection-end-line="109" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -192,11 +187,11 @@
         <option value="$PROJECT_DIR$/provider/src/main/java/com/provider/design/comtroller/VueDeliveryController.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/core/design/pojo/ResumeListDto.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/core/design/exception/UtilParmeter.java" />
-        <option value="$PROJECT_DIR$/provider/src/main/java/com/provider/design/service/VueDealResumeService.java" />
         <option value="$PROJECT_DIR$/provider/src/main/java/com/provider/design/mapper/VueDealResumeMapper.java" />
+        <option value="$PROJECT_DIR$/provider/src/main/resources/mybatis/mapper/VueDealResumeMapper.xml" />
+        <option value="$PROJECT_DIR$/provider/src/main/java/com/provider/design/service/VueDealResumeService.java" />
         <option value="$PROJECT_DIR$/provider/src/main/java/com/provider/design/service/impl/VueDealResumeServiceImpl.java" />
         <option value="$PROJECT_DIR$/provider/src/main/java/com/provider/design/comtroller/VueDealResumeController.java" />
-        <option value="$PROJECT_DIR$/provider/src/main/resources/mybatis/mapper/VueDealResumeMapper.xml" />
         <option value="$PROJECT_DIR$/consumer/src/main/java/com/consumer/design/controller/VueDealResumeController.java" />
       </list>
     </option>
@@ -239,9 +234,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="109" />
-    <option name="y" value="4" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="89" />
+    <option name="y" value="23" />
     <option name="width" value="1251" />
     <option name="height" value="700" />
   </component>
@@ -287,7 +282,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -479,6 +474,17 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="provider" type="462c0819:PsiDirectoryNode" />
               <item name="design" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="provider" type="462c0819:PsiDirectoryNode" />
+              <item name="design" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -515,8 +521,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -634,7 +640,8 @@
       <workItem from="1579262719509" duration="5065000" />
       <workItem from="1579688465435" duration="1876000" />
       <workItem from="1579949112030" duration="2711000" />
-      <workItem from="1580101963648" duration="7399000" />
+      <workItem from="1580101963648" duration="7432000" />
+      <workItem from="1580177180209" duration="7094000" />
     </task>
     <task id="LOCAL-00001" summary="core">
       <created>1578153193935</created>
@@ -668,7 +675,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163878000" />
+    <option name="totallyTimeSpent" value="171005000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -681,9 +688,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0098335855" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.026475038" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -694,8 +700,8 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.86913764" visible="true" weight="0.47846153" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49848714" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.86913764" weight="0.47846153" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49848714" visible="true" weight="0.4353846" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.25538462" />
@@ -705,7 +711,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5015129" side_tool="true" weight="0.42553192" />
       <window_info anchor="bottom" id="Spring" order="11" weight="0.32923076" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32923076" />
-      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.69969743" weight="0.21076924" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.69969743" weight="0.50153846" />
       <window_info anchor="bottom" id="Run Dashboard" order="14" sideWeight="0.78697747" weight="0.120527305" />
       <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -716,7 +722,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" visible="true" weight="0.32980332" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.32980332" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.32980332" />
       <window_info active="true" anchor="right" id="Coverage" order="10" side_tool="true" visible="true" weight="0.32922202" />
       <window_info anchor="right" id="Maven" order="11" visible="true" weight="0.2006717" />
@@ -797,36 +803,6 @@
           <line>148</line>
           <properties />
           <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/consumer/src/main/java/com/consumer/design/controller/VueDealResumeController.java</url>
-          <line>75</line>
-          <properties />
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/comtroller/VueDealResumeController.java</url>
-          <line>67</line>
-          <properties />
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/consumer/src/main/java/com/consumer/design/controller/VueDealResumeController.java</url>
-          <line>77</line>
-          <properties />
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/comtroller/VueDealResumeController.java</url>
-          <line>48</line>
-          <properties />
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/consumer/src/main/java/com/consumer/design/controller/VueDealResumeController.java</url>
-          <line>56</line>
-          <properties />
-          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -931,9 +907,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="17" column="30" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1126,34 +1099,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/service/impl/VueDealResumeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="28" column="63" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/service/VueDealResumeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/mapper/VueDealResumeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="26" column="79" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/provider/src/main/resources/mybatis/mapper/VueDealResumeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/consumer/src/main/java/com/consumer/design/controller/VueDeliveryController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -1168,10 +1113,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/provider/src/main/resources/mybatis/mapper/VueDealResumeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="21" column="66" lean-forward="true" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/mapper/VueDealResumeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="23" column="88" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/service/VueDealResumeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="19" column="54" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/service/impl/VueDealResumeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="43" column="65" selection-start-line="43" selection-start-column="65" selection-end-line="43" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/provider/design/comtroller/VueDealResumeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        <state relative-caret-position="-9">
+          <caret line="109" column="6" selection-start-line="109" selection-start-column="6" selection-end-line="109" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1180,8 +1153,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/consumer/src/main/java/com/consumer/design/controller/VueDealResumeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+        <state relative-caret-position="-90">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

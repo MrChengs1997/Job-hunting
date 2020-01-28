@@ -41,10 +41,11 @@
                     <div>作品地址：{{resumeShowDeail.resumeWorksAddr}} </div>
                     <div>自我描述：{{resumeShowDeail.resumeDesc}} </div>
                     <div v-if="showdiffjobCode == 0" style="text-align:center" class="btn_sended" >
-                              <a @click="qualified(resumeShowDeail.resumeUserId,resumeShowDeail.jobId)">合格</a>
+                              <a @click="qualified(resumeShowDeail.resumeUserId,resumeShowDeail.jobId,index)">合格</a>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              <a >不合格</a></div>
-                    <div v-if="showdiffjobCode == 1" style="text-align:center" class="btn_sended" ><a>删除记录</a></div>
+                              <a  @click="disqualified(resumeShowDeail.resumeUserId,resumeShowDeail.jobId,index)">不合格</a></div>
+                    <div v-if="showdiffjobCode == 1" style="text-align:center" class="btn_sended" >
+                        <a @click="deleteResume(resumeShowDeail.resumeUserId,resumeShowDeail.jobId,index)">删除记录</a></div>
                     <div class="links">
                     </div>
                   </li>
@@ -58,19 +59,65 @@
     </div>
 </template>
 <script>
+  import axios from 'axios'
   export default {
     props:{
       showdiffjobCode:Number,
-      resumeShowDeails:Array//查询简历详情
+      resumeShowDeails:Array,//查询简历详情
+      updateResumeShowDeails:Function
     },
     data(){
       return {
       }
     },
     methods:{
-      qualified(userId,jobId){//投递简历用户：userId   投递工作的id:jobId
-        console.log(userId + "--" + jobId)
-        console.log("-------")
+      //合格用户简历
+      qualified(userId,jobId,index){//投递简历用户：userId   投递工作的id:jobId
+        console.log(userId + "--" + jobId + "--" + index)
+        const url = `http://localhost:8082/vuequalifiedResume/${userId}/${jobId}`
+        axios({
+          url:url,
+          method:'GET',
+        }).then(response => {
+          const  code = response.data
+          if (code ==1){
+            this.updateResumeShowDeails(index)
+          }
+          return
+        })
+        return
+      },
+      //不合格用户简历
+      disqualified(userId,jobId,index){
+        console.log(userId + "--" + jobId + "--" + index)
+        const url = `http://localhost:8082/vuedisqualifiedResume/${userId}/${jobId}`
+        axios({
+          url:url,
+          method:'GET',
+        }).then(response => {
+          const  code = response.data
+          if (code ==1){
+            this.updateResumeShowDeails(index)
+          }
+          return
+        })
+        return
+      },
+      //删除合格简历记录
+      deleteResume(userId,jobId,index){
+        console.log(userId + "--" + jobId + "--" + index)
+        const url = `http://localhost:8082/vuedeleteResume/${userId}/${jobId}`
+        axios({
+          url:url,
+          method:'GET',
+        }).then(response => {
+          const  code = response.data
+          if (code ==1){
+            this.updateResumeShowDeails(index)
+          }
+          return
+        })
+        return
       }
 
     }
